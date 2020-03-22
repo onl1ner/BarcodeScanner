@@ -1,0 +1,572 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		066BDF04C4BF24F74E24D7A0C97B8E26 /* BottomPopupPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86FEE3862E029D68837EA8CEB57A99C /* BottomPopupPresentationController.swift */; };
+		1C009F8B583D6201A4BE805F9D0B8D4D /* BottomPopupDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028812912BC61E31F95B1E81C1186E78 /* BottomPopupDismissAnimator.swift */; };
+		49429D9637A42EA53BC7E1BD80D2C0BF /* Pods-BarcodeScanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC38F97A42BA26B1E8261E16F107E486 /* Pods-BarcodeScanner-dummy.m */; };
+		622CDA52DD2316EE7B76E71AEA167D99 /* BottomPopupDismissInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E370F4B28BE004776909F7532B800294 /* BottomPopupDismissInteractionController.swift */; };
+		78013A63D537D62CDF1A0557FEB7E486 /* Pods-BarcodeScanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE5E8C27D8EADCA7B0E6CA8CED4C321B /* Pods-BarcodeScanner-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7E3CC42CF2F137AE88619E7E3BE6BD02 /* BottomPopupPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE9D5A37D1263D1250513FF7436BB71 /* BottomPopupPresentAnimator.swift */; };
+		8D1261BE4ED888F40FE264DBBDD8DEA1 /* BottomPopupUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1D60551A558BA9CCAE9686D69D8FC /* BottomPopupUtils.swift */; };
+		8D82EC4BF06AC9AF980EC1776341B3F0 /* BottomPopup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4F6B584ABF5DA04EC52C089B3B302B /* BottomPopup-dummy.m */; };
+		A55EAADB30056258B79D7D5DCDF9D3E5 /* BottomPopupTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A65663DC4EA3CA9473D268680827D /* BottomPopupTransitionHandler.swift */; };
+		AA51D60F338F9E7BD3B465EC983232F4 /* BottomPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D3DDF17266F694BF3765B78FB37235 /* BottomPopupViewController.swift */; };
+		CF7FD46D50DDB03F3E468B99679163D4 /* BottomPopupNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C476B8CE093FC310F6E8B157FB0E454 /* BottomPopupNavigationController.swift */; };
+		DECFF0004E6DCBAB1582E7B4355033AC /* BottomPopup-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D4FEF2EB027E70AE97B4B45EB370B5 /* BottomPopup-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0EC81533792442CF8407B5DC5E27B6B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E78B17C6DDC46B873852A827DF9E8DC6;
+			remoteInfo = BottomPopup;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		028812912BC61E31F95B1E81C1186E78 /* BottomPopupDismissAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BottomPopupDismissAnimator.swift; path = BottomPopup/BottomPopupController/BottomPopupDismissAnimator.swift; sourceTree = "<group>"; };
+		0BE9D5A37D1263D1250513FF7436BB71 /* BottomPopupPresentAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BottomPopupPresentAnimator.swift; path = BottomPopup/BottomPopupController/BottomPopupPresentAnimator.swift; sourceTree = "<group>"; };
+		1402C43FC4EE668ECAC317866E953153 /* Pods-BarcodeScanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BarcodeScanner.modulemap"; sourceTree = "<group>"; };
+		1598CF6FA4E8CD03713023EF2B8A19C7 /* Pods-BarcodeScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BarcodeScanner.debug.xcconfig"; sourceTree = "<group>"; };
+		2C476B8CE093FC310F6E8B157FB0E454 /* BottomPopupNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BottomPopupNavigationController.swift; path = BottomPopup/BottomPopupController/BottomPopupNavigationController.swift; sourceTree = "<group>"; };
+		31F1D60551A558BA9CCAE9686D69D8FC /* BottomPopupUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BottomPopupUtils.swift; path = BottomPopup/BottomPopupController/BottomPopupUtils.swift; sourceTree = "<group>"; };
+		3A9B5FD9FAC85CE3903CF42B5D2C1C91 /* Pods-BarcodeScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BarcodeScanner.release.xcconfig"; sourceTree = "<group>"; };
+		42D3DDF17266F694BF3765B78FB37235 /* BottomPopupViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BottomPopupViewController.swift; path = BottomPopup/BottomPopupController/BottomPopupViewController.swift; sourceTree = "<group>"; };
+		4D4F6B584ABF5DA04EC52C089B3B302B /* BottomPopup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BottomPopup-dummy.m"; sourceTree = "<group>"; };
+		6CF6AFDAFFB7447FD21840B9CDC58FC2 /* BottomPopup.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BottomPopup.xcconfig; sourceTree = "<group>"; };
+		6EF65DA5247902F9541AB2FEF5AC7F43 /* BottomPopup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BottomPopup-prefix.pch"; sourceTree = "<group>"; };
+		765EA3DCC0A54517CAE3668DD8491AD5 /* Pods-BarcodeScanner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BarcodeScanner-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7B9604203FA8A0C56DF4DACFDB41ACA4 /* libBottomPopup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libBottomPopup.a; path = libBottomPopup.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C3A65663DC4EA3CA9473D268680827D /* BottomPopupTransitionHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BottomPopupTransitionHandler.swift; path = BottomPopup/BottomPopupController/BottomPopupTransitionHandler.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BC9F510C8E007CDF7DA59E154B1FE81F /* BottomPopup.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BottomPopup.modulemap; sourceTree = "<group>"; };
+		CBCD50930BDD863F76D11F05826A3BFC /* Pods-BarcodeScanner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BarcodeScanner-acknowledgements.plist"; sourceTree = "<group>"; };
+		E370F4B28BE004776909F7532B800294 /* BottomPopupDismissInteractionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BottomPopupDismissInteractionController.swift; path = BottomPopup/BottomPopupController/BottomPopupDismissInteractionController.swift; sourceTree = "<group>"; };
+		E59BDD55FAE5E8041FA304FFBDAECEAE /* libPods-BarcodeScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-BarcodeScanner.a"; path = "libPods-BarcodeScanner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D4FEF2EB027E70AE97B4B45EB370B5 /* BottomPopup-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BottomPopup-umbrella.h"; sourceTree = "<group>"; };
+		E86FEE3862E029D68837EA8CEB57A99C /* BottomPopupPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BottomPopupPresentationController.swift; path = BottomPopup/BottomPopupController/BottomPopupPresentationController.swift; sourceTree = "<group>"; };
+		FC38F97A42BA26B1E8261E16F107E486 /* Pods-BarcodeScanner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BarcodeScanner-dummy.m"; sourceTree = "<group>"; };
+		FE5E8C27D8EADCA7B0E6CA8CED4C321B /* Pods-BarcodeScanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BarcodeScanner-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34204848D9678FF110051635AD5269A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D0575E60682EC87335EC4ADBF8263DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10097C2919574D1E01F2C09F92B3A200 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E242AEA5A32E68E6520EA2DC410B29F0 /* Pods-BarcodeScanner */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		413C1D9FE1A8821BCAAA86FA38A782DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B2414F89A8C5F8EB9B0A88EF456C043 /* BottomPopup */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B2414F89A8C5F8EB9B0A88EF456C043 /* BottomPopup */ = {
+			isa = PBXGroup;
+			children = (
+				028812912BC61E31F95B1E81C1186E78 /* BottomPopupDismissAnimator.swift */,
+				E370F4B28BE004776909F7532B800294 /* BottomPopupDismissInteractionController.swift */,
+				2C476B8CE093FC310F6E8B157FB0E454 /* BottomPopupNavigationController.swift */,
+				0BE9D5A37D1263D1250513FF7436BB71 /* BottomPopupPresentAnimator.swift */,
+				E86FEE3862E029D68837EA8CEB57A99C /* BottomPopupPresentationController.swift */,
+				8C3A65663DC4EA3CA9473D268680827D /* BottomPopupTransitionHandler.swift */,
+				31F1D60551A558BA9CCAE9686D69D8FC /* BottomPopupUtils.swift */,
+				42D3DDF17266F694BF3765B78FB37235 /* BottomPopupViewController.swift */,
+				9E8C5364294FC6EDA46F0CF0002C06BA /* Support Files */,
+			);
+			name = BottomPopup;
+			path = BottomPopup;
+			sourceTree = "<group>";
+		};
+		9E8C5364294FC6EDA46F0CF0002C06BA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC9F510C8E007CDF7DA59E154B1FE81F /* BottomPopup.modulemap */,
+				6CF6AFDAFFB7447FD21840B9CDC58FC2 /* BottomPopup.xcconfig */,
+				4D4F6B584ABF5DA04EC52C089B3B302B /* BottomPopup-dummy.m */,
+				6EF65DA5247902F9541AB2FEF5AC7F43 /* BottomPopup-prefix.pch */,
+				E5D4FEF2EB027E70AE97B4B45EB370B5 /* BottomPopup-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BottomPopup";
+			sourceTree = "<group>";
+		};
+		B12242D7830495FD18D6014A7E0D4CBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B9604203FA8A0C56DF4DACFDB41ACA4 /* libBottomPopup.a */,
+				E59BDD55FAE5E8041FA304FFBDAECEAE /* libPods-BarcodeScanner.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				413C1D9FE1A8821BCAAA86FA38A782DC /* Pods */,
+				B12242D7830495FD18D6014A7E0D4CBF /* Products */,
+				10097C2919574D1E01F2C09F92B3A200 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E242AEA5A32E68E6520EA2DC410B29F0 /* Pods-BarcodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				1402C43FC4EE668ECAC317866E953153 /* Pods-BarcodeScanner.modulemap */,
+				765EA3DCC0A54517CAE3668DD8491AD5 /* Pods-BarcodeScanner-acknowledgements.markdown */,
+				CBCD50930BDD863F76D11F05826A3BFC /* Pods-BarcodeScanner-acknowledgements.plist */,
+				FC38F97A42BA26B1E8261E16F107E486 /* Pods-BarcodeScanner-dummy.m */,
+				FE5E8C27D8EADCA7B0E6CA8CED4C321B /* Pods-BarcodeScanner-umbrella.h */,
+				1598CF6FA4E8CD03713023EF2B8A19C7 /* Pods-BarcodeScanner.debug.xcconfig */,
+				3A9B5FD9FAC85CE3903CF42B5D2C1C91 /* Pods-BarcodeScanner.release.xcconfig */,
+			);
+			name = "Pods-BarcodeScanner";
+			path = "Target Support Files/Pods-BarcodeScanner";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		33F659D8CAB07FC5AC678B83803F0956 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78013A63D537D62CDF1A0557FEB7E486 /* Pods-BarcodeScanner-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E60BEA039AA12DF6B62B5EC421DA73C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DECFF0004E6DCBAB1582E7B4355033AC /* BottomPopup-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		52E49A97C7C317F11E2DBF3549044F72 /* Pods-BarcodeScanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4092FFEE9B1D71545FF7A47BDE288E1F /* Build configuration list for PBXNativeTarget "Pods-BarcodeScanner" */;
+			buildPhases = (
+				33F659D8CAB07FC5AC678B83803F0956 /* Headers */,
+				EB1667A134CE1AB4BD297E6943D4DD36 /* Sources */,
+				34204848D9678FF110051635AD5269A5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E51FE6BEEB103BDB1130314FF174F1B2 /* PBXTargetDependency */,
+			);
+			name = "Pods-BarcodeScanner";
+			productName = "Pods-BarcodeScanner";
+			productReference = E59BDD55FAE5E8041FA304FFBDAECEAE /* libPods-BarcodeScanner.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E78B17C6DDC46B873852A827DF9E8DC6 /* BottomPopup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FAFF36D83C2FC755FBFDB638C3D2B5B /* Build configuration list for PBXNativeTarget "BottomPopup" */;
+			buildPhases = (
+				7E60BEA039AA12DF6B62B5EC421DA73C /* Headers */,
+				196785DF275831D5D305F35EB9004A1D /* Sources */,
+				6D0575E60682EC87335EC4ADBF8263DD /* Frameworks */,
+				8D63119221413C4A48BDC583C3D8FFA5 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BottomPopup;
+			productName = BottomPopup;
+			productReference = 7B9604203FA8A0C56DF4DACFDB41ACA4 /* libBottomPopup.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = B12242D7830495FD18D6014A7E0D4CBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E78B17C6DDC46B873852A827DF9E8DC6 /* BottomPopup */,
+				52E49A97C7C317F11E2DBF3549044F72 /* Pods-BarcodeScanner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8D63119221413C4A48BDC583C3D8FFA5 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/BottomPopup/BottomPopup.modulemap",
+				"${PODS_ROOT}/Headers/Public/BottomPopup/BottomPopup-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/BottomPopup-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/BottomPopup/BottomPopup.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/BottomPopup/BottomPopup-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		196785DF275831D5D305F35EB9004A1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D82EC4BF06AC9AF980EC1776341B3F0 /* BottomPopup-dummy.m in Sources */,
+				1C009F8B583D6201A4BE805F9D0B8D4D /* BottomPopupDismissAnimator.swift in Sources */,
+				622CDA52DD2316EE7B76E71AEA167D99 /* BottomPopupDismissInteractionController.swift in Sources */,
+				CF7FD46D50DDB03F3E468B99679163D4 /* BottomPopupNavigationController.swift in Sources */,
+				7E3CC42CF2F137AE88619E7E3BE6BD02 /* BottomPopupPresentAnimator.swift in Sources */,
+				066BDF04C4BF24F74E24D7A0C97B8E26 /* BottomPopupPresentationController.swift in Sources */,
+				A55EAADB30056258B79D7D5DCDF9D3E5 /* BottomPopupTransitionHandler.swift in Sources */,
+				8D1261BE4ED888F40FE264DBBDD8DEA1 /* BottomPopupUtils.swift in Sources */,
+				AA51D60F338F9E7BD3B465EC983232F4 /* BottomPopupViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB1667A134CE1AB4BD297E6943D4DD36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49429D9637A42EA53BC7E1BD80D2C0BF /* Pods-BarcodeScanner-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E51FE6BEEB103BDB1130314FF174F1B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BottomPopup;
+			target = E78B17C6DDC46B873852A827DF9E8DC6 /* BottomPopup */;
+			targetProxy = 0EC81533792442CF8407B5DC5E27B6B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		83674CADA88A31E5C0F6EB27EAAA1B29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A9B5FD9FAC85CE3903CF42B5D2C1C91 /* Pods-BarcodeScanner.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BarcodeScanner/Pods-BarcodeScanner.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A0D876C294CBD3F4406EA5FCE91A6451 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CF6AFDAFFB7447FD21840B9CDC58FC2 /* BottomPopup.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/BottomPopup/BottomPopup-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = Headers/Public/BottomPopup/BottomPopup.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = BottomPopup;
+				PRODUCT_NAME = BottomPopup;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C8ACC75A89E89B20E5C480C48E8A6428 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1598CF6FA4E8CD03713023EF2B8A19C7 /* Pods-BarcodeScanner.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BarcodeScanner/Pods-BarcodeScanner.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F1B49203F3A21E69E78590A73CE5BFD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CF6AFDAFFB7447FD21840B9CDC58FC2 /* BottomPopup.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/BottomPopup/BottomPopup-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = Headers/Public/BottomPopup/BottomPopup.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = BottomPopup;
+				PRODUCT_NAME = BottomPopup;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4092FFEE9B1D71545FF7A47BDE288E1F /* Build configuration list for PBXNativeTarget "Pods-BarcodeScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8ACC75A89E89B20E5C480C48E8A6428 /* Debug */,
+				83674CADA88A31E5C0F6EB27EAAA1B29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */,
+				ECB437504DF805BD96CAABF97400B526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FAFF36D83C2FC755FBFDB638C3D2B5B /* Build configuration list for PBXNativeTarget "BottomPopup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0D876C294CBD3F4406EA5FCE91A6451 /* Debug */,
+				F1B49203F3A21E69E78590A73CE5BFD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
