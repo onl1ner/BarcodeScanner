@@ -6,6 +6,5 @@ target 'BarcodeScanner' do
   # use_frameworks!
 
   # Pods for BarcodeScanner
-  pod 'BottomPopup'
-
+  pod 'SwiftEntryKit'
 end

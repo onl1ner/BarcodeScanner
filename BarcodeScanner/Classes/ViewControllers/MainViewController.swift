@@ -8,9 +8,9 @@
 
 import UIKit
 import AVFoundation
-import BottomPopup
+import SwiftEntryKit
 
-class MainViewController: UIViewController{
+class MainViewController: UIViewController {
     
     let codeTypes = [AVMetadataObject.ObjectType.ean8,
                      AVMetadataObject.ObjectType.ean13]
@@ -83,12 +83,25 @@ class MainViewController: UIViewController{
 extension MainViewController : AVCaptureMetadataOutputObjectsDelegate{
     
     func changeViewController(barcode code : String!) -> Void {
+        let popup = UINib(nibName: "ProductPopup", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ProductPopup
+        let scannedProduct = Product(barcode: code)
         
+        var attributes = Attributes.popupConfiguration()
+        
+        attributes.lifecycleEvents.didDisappear = { self.unsetBlurEffect() }
+        
+        scannedProduct.getProductImage() { (image) in popup.setProductImage(whereImage: image!) }
+        scannedProduct.getProductClass() { (classification) in popup.setProductClass(whereClass: classification!) }
+        scannedProduct.getProductName() { (name) in popup.setProductName(whereName: name!) }
+        
+        popup.layer.cornerRadius = 15
+        
+        SwiftEntryKit.display(entry: popup, using: attributes)
     }
     
     func metadataOutput(_ output: AVCaptureMetadataOutput,
                         didOutput metadataObjects: [AVMetadataObject],
-                        from connection: AVCaptureConnection) {
+                        from connection: AVCaptureConnection) -> Void {
         
         if metadataObjects.count == 0 {
             return
@@ -98,7 +111,7 @@ extension MainViewController : AVCaptureMetadataOutputObjectsDelegate{
         
         if codeTypes.contains(metadataObj.type) {
             if metadataObj.stringValue != nil {
-                self.setBlurEffect()
+                setBlurEffect()
                 captureSession.stopRunning()
                 changeViewController(barcode: metadataObj.stringValue)
             }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,10 @@
 		924521172427B4FC0050F4DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924521162427B4FC0050F4DD /* ViewController.swift */; };
 		9245211A2427B58A0050F4DD /* BarcodeDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924521192427B58A0050F4DD /* BarcodeDB.swift */; };
 		9245211C2427B59F0050F4DD /* GoogleSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9245211B2427B59F0050F4DD /* GoogleSearch.swift */; };
+		924521202427CCB00050F4DD /* ProductPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9245211F2427CCB00050F4DD /* ProductPopup.xib */; };
+		924521222427CCDA0050F4DD /* ProductPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924521212427CCDA0050F4DD /* ProductPopup.swift */; };
+		924521242427D5660050F4DD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924521232427D5660050F4DD /* Product.swift */; };
+		924521262427D6780050F4DD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924521252427D6780050F4DD /* Config.swift */; };
 		9254558024265D65007F5FD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254557F24265D65007F5FD4 /* AppDelegate.swift */; };
 		9254558224265D65007F5FD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254558124265D65007F5FD4 /* SceneDelegate.swift */; };
 		9254558724265D65007F5FD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9254558524265D65007F5FD4 /* Main.storyboard */; };
@@ -27,6 +31,10 @@
 		924521162427B4FC0050F4DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		924521192427B58A0050F4DD /* BarcodeDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeDB.swift; sourceTree = "<group>"; };
 		9245211B2427B59F0050F4DD /* GoogleSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSearch.swift; sourceTree = "<group>"; };
+		9245211F2427CCB00050F4DD /* ProductPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductPopup.xib; sourceTree = "<group>"; };
+		924521212427CCDA0050F4DD /* ProductPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPopup.swift; sourceTree = "<group>"; };
+		924521232427D5660050F4DD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		924521252427D6780050F4DD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		9254557C24265D65007F5FD4 /* BarcodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9254557F24265D65007F5FD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9254558124265D65007F5FD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +72,7 @@
 			children = (
 				924521182427B5600050F4DD /* Structures */,
 				924521152427B4E80050F4DD /* Extensions */,
-				924521142427B4BB0050F4DD /* Magicians */,
+				924521142427B4BB0050F4DD /* Utils */,
 				924521132427B3CA0050F4DD /* ViewControllers */,
 			);
 			path = Classes;
@@ -78,12 +86,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		924521142427B4BB0050F4DD /* Magicians */ = {
+		924521142427B4BB0050F4DD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				924521102427AC360050F4DD /* BarcodeRectangleView.swift */,
+				924521232427D5660050F4DD /* Product.swift */,
+				924521252427D6780050F4DD /* Config.swift */,
 			);
-			path = Magicians;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		924521152427B4E80050F4DD /* Extensions */ = {
@@ -101,6 +111,23 @@
 				9245211B2427B59F0050F4DD /* GoogleSearch.swift */,
 			);
 			path = Structures;
+			sourceTree = "<group>";
+		};
+		9245211D2427CC370050F4DD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9245211E2427CC4B0050F4DD /* Popups */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9245211E2427CC4B0050F4DD /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				9245211F2427CCB00050F4DD /* ProductPopup.xib */,
+				924521212427CCDA0050F4DD /* ProductPopup.swift */,
+			);
+			path = Popups;
 			sourceTree = "<group>";
 		};
 		9254557324265D65007F5FD4 = {
@@ -124,6 +151,7 @@
 		9254557E24265D65007F5FD4 /* BarcodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				9245211D2427CC370050F4DD /* UI */,
 				924521122427B3C10050F4DD /* Classes */,
 				9254557F24265D65007F5FD4 /* AppDelegate.swift */,
 				9254558124265D65007F5FD4 /* SceneDelegate.swift */,
@@ -204,6 +232,7 @@
 			files = (
 				9254558C24265D66007F5FD4 /* LaunchScreen.storyboard in Resources */,
 				9254558924265D66007F5FD4 /* Assets.xcassets in Resources */,
+				924521202427CCB00050F4DD /* ProductPopup.xib in Resources */,
 				9254558724265D65007F5FD4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,9 +271,12 @@
 			files = (
 				924521172427B4FC0050F4DD /* ViewController.swift in Sources */,
 				9245211C2427B59F0050F4DD /* GoogleSearch.swift in Sources */,
+				924521222427CCDA0050F4DD /* ProductPopup.swift in Sources */,
 				924521112427AC360050F4DD /* BarcodeRectangleView.swift in Sources */,
 				9245211A2427B58A0050F4DD /* BarcodeDB.swift in Sources */,
+				924521242427D5660050F4DD /* Product.swift in Sources */,
 				9254558024265D65007F5FD4 /* AppDelegate.swift in Sources */,
+				924521262427D6780050F4DD /* Config.swift in Sources */,
 				9254558224265D65007F5FD4 /* SceneDelegate.swift in Sources */,
 				9254559424265F3E007F5FD4 /* MainViewController.swift in Sources */,
 			);

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProductPopup" customModule="BarcodeScanner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iy2-6j-pVB">
+                    <rect key="frame" x="75" y="30" width="170" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="170" id="WA0-IQ-xX5"/>
+                        <constraint firstAttribute="height" constant="150" id="ybt-qZ-Bgc"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Классификатор продукта" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8b-84-dH5">
+                    <rect key="frame" x="15" y="183" width="290" height="23.5"/>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наименование продукта" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LC-LG-oO1">
+                    <rect key="frame" x="15" y="206.5" width="290" height="27.5"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMG-gG-GUo">
+                    <rect key="frame" x="284" y="15" width="21" height="22"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="xmark" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                    </state>
+                    <connections>
+                        <action selector="dismissPressed:" destination="-1" eventType="touchUpInside" id="seg-qT-dmL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uMG-gG-GUo" secondAttribute="trailing" constant="15" id="4Li-zZ-ewW"/>
+                <constraint firstItem="i8b-84-dH5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="7TC-S3-CmR"/>
+                <constraint firstItem="i8b-84-dH5" firstAttribute="top" secondItem="iy2-6j-pVB" secondAttribute="bottom" constant="3" id="SZl-uj-W4L"/>
+                <constraint firstItem="0LC-LG-oO1" firstAttribute="top" secondItem="i8b-84-dH5" secondAttribute="bottom" id="U5l-Hy-qUO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0LC-LG-oO1" secondAttribute="trailing" constant="15" id="Uac-0w-9ts"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="i8b-84-dH5" secondAttribute="trailing" constant="15" id="XTd-OR-lFK"/>
+                <constraint firstItem="iy2-6j-pVB" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="dvB-vw-HJW"/>
+                <constraint firstItem="0LC-LG-oO1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="iJO-PT-lyJ"/>
+                <constraint firstItem="uMG-gG-GUo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="tl5-ew-OFk"/>
+                <constraint firstItem="iy2-6j-pVB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="xXd-v8-x6y"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="productClass" destination="i8b-84-dH5" id="Y2g-eb-ccC"/>
+                <outlet property="productImage" destination="iy2-6j-pVB" id="xhS-xg-hZ3"/>
+                <outlet property="productName" destination="0LC-LG-oO1" id="fQW-Ve-DV5"/>
+            </connections>
+            <point key="canvasLocation" x="120" y="144"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
