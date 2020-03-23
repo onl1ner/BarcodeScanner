@@ -45,8 +45,8 @@
                         <action selector="dismissPressed:" destination="-1" eventType="touchUpInside" id="seg-qT-dmL"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Наименование продукта" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LC-LG-oO1">
-                    <rect key="frame" x="175" y="70.5" width="185" height="110"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наименование продукта" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LC-LG-oO1">
+                    <rect key="frame" x="175" y="70.5" width="185" height="73.5"/>
                     <fontDescription key="fontDescription" name="ProximaNovaExCn-Light" family="Proxima Nova Extra Condensed" pointSize="30"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>

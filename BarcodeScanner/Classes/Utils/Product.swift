@@ -24,10 +24,22 @@ final class Product{
         }
     }
     
-    public func getProductImage(completion: @escaping ((_ image : UIImage?) -> Void)) -> Void {
-        let url = "https://www.googleapis.com/customsearch/v1?q=\(barcode!)&searchType=image&cx=\(GoogleSearch.engineKey)&key=\(GoogleSearch.apiKey)"
+    public func checkIfExist(completion: @escaping ((_ status : Int) -> Void )) -> Void {
+        let url = URL(string: BarcodeDataBase.url + "/name/" + barcode!)
         
-        getData(from: URL(string: url)!){ (data, response, error) in
+        getData(from: url!) { (data, response, error) in
+            if let data = data{
+                if let jsonData = try? JSONDecoder().decode(Name.self, from: data){
+                    completion(jsonData.status)
+                }
+            }
+        }
+    }
+    
+    public func getProductImage(completion: @escaping ((_ image : UIImage?) -> Void)) -> Void {
+        let url = URL(string: "https://www.googleapis.com/customsearch/v1?q=\(barcode!)&searchType=image&cx=\(GoogleSearch.engineKey)&key=\(GoogleSearch.apiKey)")
+        
+        getData(from: url!) { (data, response, error) in
             if let data = data{
                 if let jsonData = try? JSONDecoder().decode(GoogleResponse.self, from: data){
                     self.downloadImage(from: URL(string: jsonData.items[1].image!.thumbnailLink)!){ (image) in
@@ -38,9 +50,9 @@ final class Product{
     }
     
     public func getProductClass(completion: @escaping ((_ classifaction : String?) -> Void)) -> Void {
-        let url = BarcodeDataBase.url + "/class/" + barcode!
+        let url = URL(string: BarcodeDataBase.url + "/class/" + barcode!)
         
-        getData(from: URL(string: url)!){ (data, response, error) in
+        getData(from: url!) { (data, response, error) in
             if let data = data{
                 if let jsonData = try? JSONDecoder().decode(Class.self, from: data){
                     completion(jsonData.class[0])
@@ -50,9 +62,9 @@ final class Product{
     }
     
     public func getProductName(completion: @escaping ((_ name : String?) -> Void)) -> Void {
-        let url = BarcodeDataBase.url + "/name/" + barcode!
+        let url = URL(string: BarcodeDataBase.url + "/name/" + barcode!)
         
-        getData(from: URL(string: url)!){ (data, response, error) in
+        getData(from: url!) { (data, response, error) in
             if let data = data{
                 if let jsonData = try? JSONDecoder().decode(Name.self, from: data){
                     completion(jsonData.names[0])

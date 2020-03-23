@@ -10,13 +10,6 @@ import Foundation
 import SwiftEntryKit
 
 struct BarcodeDataBase {
-    enum codes : Int{
-        case success = 200
-        case wrongParameters = 400
-        case notFound = 404
-        case limitExceeded = 429
-    }
-    
     public static let url = "http://barcodes.olegon.ru/api/card"
 }
 

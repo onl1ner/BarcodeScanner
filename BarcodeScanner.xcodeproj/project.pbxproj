@@ -63,6 +63,8 @@
 		92ECA730242920D000CCE0B7 /* ProximaNovaCond-SemiboldIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92ECA706242920D000CCE0B7 /* ProximaNovaCond-SemiboldIt.ttf */; };
 		92ECA731242920D000CCE0B7 /* ProximaNova-RegularIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92ECA707242920D000CCE0B7 /* ProximaNova-RegularIt.ttf */; };
 		92ECA732242920D000CCE0B7 /* ProximaNovaExCn-RegularIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92ECA708242920D000CCE0B7 /* ProximaNovaExCn-RegularIt.ttf */; };
+		92ECA7342429297E00CCE0B7 /* ErrorPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92ECA7332429297E00CCE0B7 /* ErrorPopup.xib */; };
+		92ECA73624292C7F00CCE0B7 /* ErrorPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ECA73524292C7F00CCE0B7 /* ErrorPopup.swift */; };
 		E9EF20C0E411E9E836F053D9 /* libPods-BarcodeScanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F63026D1ABCF9F9F9E9B3E1D /* libPods-BarcodeScanner.a */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +128,8 @@
 		92ECA706242920D000CCE0B7 /* ProximaNovaCond-SemiboldIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaCond-SemiboldIt.ttf"; sourceTree = "<group>"; };
 		92ECA707242920D000CCE0B7 /* ProximaNova-RegularIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-RegularIt.ttf"; sourceTree = "<group>"; };
 		92ECA708242920D000CCE0B7 /* ProximaNovaExCn-RegularIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaExCn-RegularIt.ttf"; sourceTree = "<group>"; };
+		92ECA7332429297E00CCE0B7 /* ErrorPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorPopup.xib; sourceTree = "<group>"; };
+		92ECA73524292C7F00CCE0B7 /* ErrorPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopup.swift; sourceTree = "<group>"; };
 		EF879855EA857755783B90DA /* Pods-BarcodeScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeScanner.release.xcconfig"; path = "Target Support Files/Pods-BarcodeScanner/Pods-BarcodeScanner.release.xcconfig"; sourceTree = "<group>"; };
 		F63026D1ABCF9F9F9E9B3E1D /* libPods-BarcodeScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BarcodeScanner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -210,6 +214,8 @@
 			children = (
 				9245211F2427CCB00050F4DD /* ProductPopup.xib */,
 				924521212427CCDA0050F4DD /* ProductPopup.swift */,
+				92ECA7332429297E00CCE0B7 /* ErrorPopup.xib */,
+				92ECA73524292C7F00CCE0B7 /* ErrorPopup.swift */,
 			);
 			path = Popups;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92ECA7342429297E00CCE0B7 /* ErrorPopup.xib in Resources */,
 				92ECA709242920D000CCE0B7 /* ProximaNova-ExtrabldIt.ttf in Resources */,
 				92ECA728242920D000CCE0B7 /* ProximaNovaExCn-Extrabld.ttf in Resources */,
 				9254558C24265D66007F5FD4 /* LaunchScreen.storyboard in Resources */,
@@ -455,6 +462,7 @@
 				924521262427D6780050F4DD /* Config.swift in Sources */,
 				9254558224265D65007F5FD4 /* SceneDelegate.swift in Sources */,
 				9254559424265F3E007F5FD4 /* MainViewController.swift in Sources */,
+				92ECA73624292C7F00CCE0B7 /* ErrorPopup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

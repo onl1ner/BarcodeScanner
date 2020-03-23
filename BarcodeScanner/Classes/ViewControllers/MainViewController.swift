@@ -22,7 +22,7 @@ class MainViewController: UIViewController {
     
     var barcodeRectangle : RectangleView!
     
-    func setBlurEffect() -> Void {
+    public func setBlurEffect() -> Void {
         let effect = UIBlurEffect(style: .regular)
         effectView = UIVisualEffectView(effect: effect)
         
@@ -30,18 +30,60 @@ class MainViewController: UIViewController {
         effectView.frame = view.frame
     }
     
-    func unsetBlurEffect() -> Void {
+    public func unsetBlurEffect() -> Void {
         effectView.removeFromSuperview()
         captureSession.startRunning()
+    }
+    
+    public func showProductPopup(scannedProduct product : Product) -> Void {
+        DispatchQueue.main.async {
+            let popup = UINib(nibName: "ProductPopup", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ProductPopup
+            
+            var attributes = Attributes.popupConfiguration()
+            
+            attributes.lifecycleEvents.didDisappear = { self.unsetBlurEffect() }
+            
+            product.getProductImage() { (image) in popup.setProductImage(whereImage: image!) }
+            product.getProductClass() { (classification) in popup.setProductClass(whereClass: classification!) }
+            product.getProductName() { (name) in popup.setProductName(whereName: name!) }
+            
+            popup.layer.cornerRadius = 20
+            
+            SwiftEntryKit.display(entry: popup, using: attributes)
+        }
+    }
+    
+    public func showErrorPopup(errorCode error : Int) -> Void {
+        DispatchQueue.main.async {
+            let popup = UINib(nibName: "ErrorPopup", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ErrorPopup
+            var attributes = Attributes.popupConfiguration()
+            
+            attributes.lifecycleEvents.didDisappear = { self.unsetBlurEffect() }
+            
+            popup.layer.cornerRadius = 20
+            
+            popup.show(withError: error)
+            SwiftEntryKit.display(entry: popup, using: attributes)
+        }
+    }
+    
+    public func changeViewController(barcode code : String!) -> Void {
+        let scannedProduct = Product(barcode: code)
+        
+        scannedProduct.checkIfExist(){ (status) in
+            if status == 200 {
+                self.showProductPopup(scannedProduct: scannedProduct)
+            } else {
+                self.showErrorPopup(errorCode: status)
+            }
+        }
     }
     
     override func viewDidLoad() -> Void {
         super.viewDidLoad()
         
         // Берем в переменную записывающее устройство
-        guard let capture_device = AVCaptureDevice.default(for: AVMediaType.video) else {
-            return
-        }
+        guard let capture_device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
         
         do {
             // Добавляем инпут как инстанс класса AVCaptureDeviceInput полученного девайса
@@ -56,10 +98,7 @@ class MainViewController: UIViewController {
             captureOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             captureOutput.metadataObjectTypes = codeTypes
             
-        }
-        catch{
-            return
-        }
+        } catch { return }
         
         // Инициализируем слой с превью видео
         videoPreview = AVCaptureVideoPreviewLayer(session: captureSession)
@@ -81,31 +120,11 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController : AVCaptureMetadataOutputObjectsDelegate{
-    
-    func changeViewController(barcode code : String!) -> Void {
-        let popup = UINib(nibName: "ProductPopup", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ProductPopup
-        let scannedProduct = Product(barcode: code)
-        
-        var attributes = Attributes.popupConfiguration()
-        
-        attributes.lifecycleEvents.didDisappear = { self.unsetBlurEffect() }
-        
-        scannedProduct.getProductImage() { (image) in popup.setProductImage(whereImage: image!) }
-        scannedProduct.getProductClass() { (classification) in popup.setProductClass(whereClass: classification!) }
-        scannedProduct.getProductName() { (name) in popup.setProductName(whereName: name!) }
-        
-        popup.layer.cornerRadius = 20
-        
-        SwiftEntryKit.display(entry: popup, using: attributes)
-    }
-    
     func metadataOutput(_ output: AVCaptureMetadataOutput,
                         didOutput metadataObjects: [AVMetadataObject],
                         from connection: AVCaptureConnection) -> Void {
         
-        if metadataObjects.count == 0 {
-            return
-        }
+        if metadataObjects.count == 0 { return }
         
         let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
         

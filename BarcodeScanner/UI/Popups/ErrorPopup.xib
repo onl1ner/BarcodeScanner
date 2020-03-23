@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNovaExCn-Bold.ttf">
+            <string>ProximaNovaExCn-Bold</string>
+        </array>
+        <array key="ProximaNovaExCn-Regular.ttf">
+            <string>ProximaNovaExCn-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ErrorPopup" customModule="BarcodeScanner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uc-Lo-vwH">
+                    <rect key="frame" x="338" y="15" width="22" height="22"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="xmark" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                    </state>
+                    <connections>
+                        <action selector="dismissPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="NXg-UQ-5nJ"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notFound" translatesAutoresizingMaskIntoConstraints="NO" id="uAk-5n-Mmf">
+                    <rect key="frame" x="123.5" y="40" width="128" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="hsj-OA-5KX"/>
+                        <constraint firstAttribute="width" constant="128" id="xPr-La-8IT"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Уупс!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLC-9m-pXt">
+                    <rect key="frame" x="160.5" y="173" width="54.5" height="37"/>
+                    <fontDescription key="fontDescription" name="ProximaNovaExCn-Bold" family="Proxima Nova Extra Condensed" pointSize="30"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Похоже, что в базе данных не нашлось товаров с подходящим штрихкодом" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LkP-94-Xda">
+                    <rect key="frame" x="15" y="210" width="345" height="61"/>
+                    <fontDescription key="fontDescription" name="ProximaNovaExCn-Regular" family="Proxima Nova Extra Condensed" pointSize="25"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iLC-9m-pXt" firstAttribute="top" secondItem="uAk-5n-Mmf" secondAttribute="bottom" constant="5" id="7cf-NE-vNM"/>
+                <constraint firstAttribute="trailing" secondItem="LkP-94-Xda" secondAttribute="trailing" constant="15" id="DiR-ai-hqg"/>
+                <constraint firstItem="iLC-9m-pXt" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="IzG-N6-h5X"/>
+                <constraint firstItem="4Uc-Lo-vwH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="Mpq-Ix-mZu"/>
+                <constraint firstItem="uAk-5n-Mmf" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="N7U-Hy-FUA"/>
+                <constraint firstItem="uAk-5n-Mmf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="bNX-ml-LaW"/>
+                <constraint firstItem="LkP-94-Xda" firstAttribute="top" secondItem="iLC-9m-pXt" secondAttribute="bottom" id="dhX-RM-Wpb"/>
+                <constraint firstItem="LkP-94-Xda" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="hlG-wa-eKQ"/>
+                <constraint firstItem="LkP-94-Xda" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="nhz-Qa-yzq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4Uc-Lo-vwH" secondAttribute="trailing" constant="15" id="yvc-We-dj1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="LkP-94-Xda" id="CLW-mH-fqR"/>
+                <outlet property="imageView" destination="uAk-5n-Mmf" id="jHs-Rr-xru"/>
+                <outlet property="titleLabel" destination="iLC-9m-pXt" id="zgj-eW-K0m"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="144.3778110944528"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="notFound" width="494" height="490"/>
+        <image name="xmark" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
