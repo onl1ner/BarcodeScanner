@@ -1,5 +1,5 @@
 //
-//  APICalls.swift
+//  Product.swift
 //  BarcodeScanner
 //
 //  Created by onl1ner onl1ner on 22/03/2020.
@@ -30,7 +30,7 @@ final class Product{
         getData(from: URL(string: url)!){ (data, response, error) in
             if let data = data{
                 if let jsonData = try? JSONDecoder().decode(GoogleResponse.self, from: data){
-                    self.downloadImage(from: URL(string: jsonData.items[0].image!.thumbnailLink)!){ (image) in
+                    self.downloadImage(from: URL(string: jsonData.items[1].image!.thumbnailLink)!){ (image) in
                         completion(image) }
                 }
             }

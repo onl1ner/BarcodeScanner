@@ -94,7 +94,7 @@ extension MainViewController : AVCaptureMetadataOutputObjectsDelegate{
         scannedProduct.getProductClass() { (classification) in popup.setProductClass(whereClass: classification!) }
         scannedProduct.getProductName() { (name) in popup.setProductName(whereName: name!) }
         
-        popup.layer.cornerRadius = 15
+        popup.layer.cornerRadius = 20
         
         SwiftEntryKit.display(entry: popup, using: attributes)
     }
