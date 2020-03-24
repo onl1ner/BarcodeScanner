@@ -10,9 +10,14 @@ import UIKit
 import SwiftEntryKit
 
 final class ProductPopup: UIView {
+    @IBOutlet var productImageBackView: UIView!
     @IBOutlet var productImage: UIImageView!
+    
     @IBOutlet var productClass: UILabel!
     @IBOutlet var productName: UILabel!
+    
+    @IBOutlet var barcodeBackView: UIView!
+    @IBOutlet var barcodeLabel: UILabel!
     
     @IBAction func dismissPressed(_ sender: Any) -> Void {
         SwiftEntryKit.dismiss()
@@ -20,7 +25,29 @@ final class ProductPopup: UIView {
     
     public func setProductImage(whereImage image : UIImage) -> Void {
         DispatchQueue.main.async {
+            self.productImageBackView.layer.cornerRadius = 20
+            
+            self.productImageBackView.setupShadow(withColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
+                                                  withOpacity: 0.2,
+                                                  withOffset: CGSize(width: 0,
+                                                                     height: 1))
+            
+            self.productImage.layer.cornerRadius = 15
+            
             self.productImage.image = image
+        }
+    }
+    
+    public func setProductBarcode(whereBarcode barcode : String) -> Void {
+        DispatchQueue.main.async {
+            self.barcodeBackView.layer.cornerRadius = 15
+            
+            self.barcodeBackView.setupShadow(withColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
+                                             withOpacity: 0.2,
+                                             withOffset: CGSize(width: 0,
+                                                                height: 1))
+            
+            self.barcodeLabel.text = barcode
         }
     }
     
@@ -32,16 +59,6 @@ final class ProductPopup: UIView {
     
     public func setProductName(whereName name : String) -> Void {
         DispatchQueue.main.async {
-            self.productName.text = name
-        }
-    }
-    
-    func configurePopup(productImage image : UIImage?,
-                              productClass classification : String?,
-                              productName name : String?) -> Void {
-        DispatchQueue.main.async {
-            self.productImage.image = image
-            self.productClass.text = classification
             self.productName.text = name
         }
     }

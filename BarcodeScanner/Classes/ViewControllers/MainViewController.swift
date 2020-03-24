@@ -47,6 +47,8 @@ class MainViewController: UIViewController {
             product.getProductClass() { (classification) in popup.setProductClass(whereClass: classification!) }
             product.getProductName() { (name) in popup.setProductName(whereName: name!) }
             
+            popup.setProductBarcode(whereBarcode: product.barcode!)
+            
             popup.layer.cornerRadius = 20
             
             SwiftEntryKit.display(entry: popup, using: attributes)

@@ -10,6 +10,9 @@
         <array key="ProximaNovaExCn-Light.ttf">
             <string>ProximaNovaExCn-Light</string>
         </array>
+        <array key="ProximaNovaExCn-Regular.ttf">
+            <string>ProximaNovaExCn-Regular</string>
+        </array>
         <array key="ProximaNovaExCn-Thin.ttf">
             <string>ProximaNovaExCn-Thin</string>
         </array>
@@ -21,15 +24,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iy2-6j-pVB">
-                    <rect key="frame" x="15" y="40" width="160" height="190"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="160" id="WA0-IQ-xX5"/>
-                        <constraint firstAttribute="height" constant="190" id="ybt-qZ-Bgc"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Классификатор продукта" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8b-84-dH5">
-                    <rect key="frame" x="175" y="40" width="185" height="30.5"/>
+                    <rect key="frame" x="185" y="40" width="175" height="61"/>
                     <fontDescription key="fontDescription" name="ProximaNovaExCn-Thin" family="Proxima Nova Extra Condensed" pointSize="25"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -46,33 +42,75 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наименование продукта" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LC-LG-oO1">
-                    <rect key="frame" x="175" y="70.5" width="185" height="73.5"/>
+                    <rect key="frame" x="185" y="101" width="175" height="73.5"/>
                     <fontDescription key="fontDescription" name="ProximaNovaExCn-Light" family="Proxima Nova Extra Condensed" pointSize="30"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                     <size key="shadowOffset" width="1" height="1"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jql-d3-LYi">
+                    <rect key="frame" x="15" y="235" width="160" height="35"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3661434004308" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sI-Fe-G98">
+                            <rect key="frame" x="15" y="3" width="130" height="29"/>
+                            <fontDescription key="fontDescription" name="ProximaNovaExCn-Regular" family="Proxima Nova Extra Condensed" pointSize="20"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="7sI-Fe-G98" firstAttribute="top" secondItem="Jql-d3-LYi" secondAttribute="top" constant="3" id="2qf-H7-3iB"/>
+                        <constraint firstAttribute="bottom" secondItem="7sI-Fe-G98" secondAttribute="bottom" constant="3" id="4nY-h7-4FU"/>
+                        <constraint firstItem="7sI-Fe-G98" firstAttribute="leading" secondItem="Jql-d3-LYi" secondAttribute="leading" constant="15" id="CdF-Xz-THI"/>
+                        <constraint firstAttribute="width" constant="160" id="mAh-Tn-MZw"/>
+                        <constraint firstAttribute="height" constant="35" id="qSV-8o-1J3"/>
+                        <constraint firstAttribute="trailing" secondItem="7sI-Fe-G98" secondAttribute="trailing" constant="15" id="xDn-d3-xpi"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLJ-zy-rh6">
+                    <rect key="frame" x="15" y="40" width="160" height="190"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iy2-6j-pVB">
+                            <rect key="frame" x="8" y="8" width="144" height="174"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="iy2-6j-pVB" secondAttribute="trailing" constant="8" id="Awf-tq-Cud"/>
+                        <constraint firstItem="iy2-6j-pVB" firstAttribute="leading" secondItem="aLJ-zy-rh6" secondAttribute="leading" constant="8" id="BTi-2t-Uu4"/>
+                        <constraint firstItem="iy2-6j-pVB" firstAttribute="top" secondItem="aLJ-zy-rh6" secondAttribute="top" constant="8" id="OAy-eq-h44"/>
+                        <constraint firstAttribute="width" constant="160" id="XKc-C0-jxb"/>
+                        <constraint firstAttribute="height" constant="190" id="ru6-sn-XTy"/>
+                        <constraint firstAttribute="bottom" secondItem="iy2-6j-pVB" secondAttribute="bottom" constant="8" id="v7k-au-HH1"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="i8b-84-dH5" firstAttribute="leading" secondItem="iy2-6j-pVB" secondAttribute="trailing" id="1cQ-GS-4Zv"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0LC-LG-oO1" secondAttribute="trailing" constant="15" id="1sF-0T-Gwe"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uMG-gG-GUo" secondAttribute="trailing" constant="15" id="4Li-zZ-ewW"/>
-                <constraint firstItem="0LC-LG-oO1" firstAttribute="leading" secondItem="iy2-6j-pVB" secondAttribute="trailing" id="RPi-OY-dKs"/>
+                <constraint firstItem="0LC-LG-oO1" firstAttribute="leading" secondItem="aLJ-zy-rh6" secondAttribute="trailing" constant="10" id="Acj-qz-whb"/>
+                <constraint firstItem="aLJ-zy-rh6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="PKy-Z2-Cwf"/>
                 <constraint firstItem="i8b-84-dH5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="Rxh-v0-04b"/>
+                <constraint firstItem="aLJ-zy-rh6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Ua4-xZ-eMW"/>
+                <constraint firstItem="Jql-d3-LYi" firstAttribute="top" secondItem="aLJ-zy-rh6" secondAttribute="bottom" constant="5" id="bQm-Pm-SZC"/>
                 <constraint firstItem="0LC-LG-oO1" firstAttribute="top" secondItem="i8b-84-dH5" secondAttribute="bottom" id="ckJ-RG-tCu"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="i8b-84-dH5" secondAttribute="trailing" constant="15" id="eYx-84-Ke1"/>
-                <constraint firstItem="iy2-6j-pVB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="fUC-Rw-IFu"/>
+                <constraint firstItem="i8b-84-dH5" firstAttribute="leading" secondItem="aLJ-zy-rh6" secondAttribute="trailing" constant="10" id="pbf-xL-X9Q"/>
+                <constraint firstItem="Jql-d3-LYi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="pvE-fG-Vic"/>
                 <constraint firstItem="uMG-gG-GUo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="tl5-ew-OFk"/>
-                <constraint firstItem="iy2-6j-pVB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="xXd-v8-x6y"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="barcodeBackView" destination="Jql-d3-LYi" id="gL2-Rf-3eO"/>
+                <outlet property="barcodeLabel" destination="7sI-Fe-G98" id="QWK-6u-3jO"/>
                 <outlet property="productClass" destination="i8b-84-dH5" id="Y2g-eb-ccC"/>
                 <outlet property="productImage" destination="iy2-6j-pVB" id="xhS-xg-hZ3"/>
+                <outlet property="productImageBackView" destination="aLJ-zy-rh6" id="BHj-1D-9pf"/>
                 <outlet property="productName" destination="0LC-LG-oO1" id="fQW-Ve-DV5"/>
             </connections>
-            <point key="canvasLocation" x="120" y="143.66197183098592"/>
+            <point key="canvasLocation" x="119.2" y="143.47826086956522"/>
         </view>
     </objects>
     <resources>

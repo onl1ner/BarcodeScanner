@@ -42,7 +42,7 @@ final class Product{
         getData(from: url!) { (data, response, error) in
             if let data = data{
                 if let jsonData = try? JSONDecoder().decode(GoogleResponse.self, from: data){
-                    self.downloadImage(from: URL(string: jsonData.items[1].image!.thumbnailLink)!){ (image) in
+                    self.downloadImage(from: URL(string: jsonData.items[1].link)!){ (image) in
                         completion(image) }
                 }
             }
@@ -55,7 +55,10 @@ final class Product{
         getData(from: url!) { (data, response, error) in
             if let data = data{
                 if let jsonData = try? JSONDecoder().decode(Class.self, from: data){
-                    completion(jsonData.class[0])
+                    if jsonData.class.count > 0 {
+                        // В базе продуктов могут быть продукты без классификации, но с названием
+                        completion(jsonData.class[0])
+                    } else { completion("Не классифицирован") }
                 }
             }
         }
