@@ -1,5 +1,9 @@
+<p align="center">
+    <img src="https://raw.githubusercontent.com/onl1ner/BarcodeScanner/master/Images/BarcodeScannerRepositoryHeader.png"/>
+</p>
+
 # What is it?
-**BarcodeScanner – simple & easy application that helps you to scan both EAN8 and EAN13 barcodes. ** 
+**BarcodeScanner – simple & easy application that helps you to scan both EAN8 and EAN13 barcodes.** 
 # How the app works
 To scan a barcode simply point the camera at the code and you are done! No need to press a button or take a photo. Application will automaticaly recognise the code your camera pointing at. 
 
