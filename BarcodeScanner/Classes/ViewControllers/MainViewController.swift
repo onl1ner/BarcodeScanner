@@ -12,6 +12,8 @@ import SwiftEntryKit
 
 class MainViewController: UIViewController {
     
+    @IBOutlet var flashlightButton: UIButton!
+    
     let codeTypes = [AVMetadataObject.ObjectType.ean8,
                      AVMetadataObject.ObjectType.ean13]
     
@@ -81,15 +83,47 @@ class MainViewController: UIViewController {
         }
     }
     
+    public func toogleFlashlight(status : Bool) -> Void {
+        guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
+
+        if captureDevice.hasTorch {
+            do {
+                try captureDevice.lockForConfiguration()
+
+                if status {
+                    captureDevice.torchMode = .on
+                    
+                    flashlightButton.setImage(UIImage(systemName: "bolt.slash.fill"), for: .normal)
+                } else {
+                    captureDevice.torchMode = .off
+                    
+                    flashlightButton.setImage(UIImage(systemName: "bolt.fill"), for: .normal)
+                }
+                
+                captureDevice.unlockForConfiguration()
+            } catch {
+                fatalError("Cannot be used")
+            }
+        } else {
+            fatalError("Not available")
+        }
+    }
+    
+    @objc public func flashlightButtonPressed() -> Void {
+        guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
+        
+        toogleFlashlight(status: !captureDevice.isTorchActive)
+    }
+    
     override func viewDidLoad() -> Void {
         super.viewDidLoad()
         
         // Берем в переменную записывающее устройство
-        guard let capture_device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
+        guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
         
         do {
             // Добавляем инпут как инстанс класса AVCaptureDeviceInput полученного девайса
-            let input = try AVCaptureDeviceInput(device: capture_device)
+            let input = try AVCaptureDeviceInput(device: captureDevice)
             captureSession.addInput(input)
             
             // Инициализируем оутпут, используя класс AVCaptureMetadataOutput и добавляем в нашу сессию
@@ -118,6 +152,9 @@ class MainViewController: UIViewController {
                                                        height: 100))
         view.addSubview(barcodeRectangle)
         view.bringSubviewToFront(barcodeRectangle)
+        
+        flashlightButton.addTarget(self, action: #selector(flashlightButtonPressed), for: .touchUpInside)
+        view.bringSubviewToFront(flashlightButton)
     }
 }
 

@@ -14,13 +14,36 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qho-zh-WtE">
+                                <rect key="frame" x="30" y="20" width="22" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="llH-oF-GVS"/>
+                                    <constraint firstAttribute="width" constant="22" id="rqg-Ir-3Q6"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button" image="bolt.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Qho-zh-WtE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="fSu-Cn-q0W"/>
+                            <constraint firstItem="Qho-zh-WtE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="tAM-Lf-Bkt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="flashlightButton" destination="Qho-zh-WtE" id="Uuv-0Q-PlM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="130"/>
+            <point key="canvasLocation" x="138.75" y="129.92957746478874"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bolt.fill" catalog="system" width="50" height="64"/>
+    </resources>
 </document>
