@@ -72,6 +72,9 @@ class MainViewController: UIViewController {
     }
     
     public func changeViewController(barcode code : String!) -> Void {
+        let feedback = UIImpactFeedbackGenerator(style: .heavy)
+        feedback.impactOccurred()
+        
         let scannedProduct = Product(barcode: code)
         
         scannedProduct.checkIfExist(){ (status) in
