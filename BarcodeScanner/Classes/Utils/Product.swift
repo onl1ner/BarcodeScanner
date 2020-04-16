@@ -25,7 +25,7 @@ final class Product{
     }
     
     public func checkIfExist(completion: @escaping ((_ status : Int) -> Void )) -> Void {
-        let url = URL(string: BarcodeDataBase.url + "/name/" + barcode!)
+        let url = URL(string: databaseURL + "/name/" + barcode!)
         
         getData(from: url!) { (data, response, error) in
             if let data = data{
@@ -37,7 +37,7 @@ final class Product{
     }
     
     public func getProductImage(completion: @escaping ((_ image : UIImage?) -> Void)) -> Void {
-        let url = URL(string: "https://www.googleapis.com/customsearch/v1?q=\(barcode!)&searchType=image&cx=\(GoogleSearch.engineKey)&key=\(GoogleSearch.apiKey)")
+        let url = URL(string: "https://www.googleapis.com/customsearch/v1?q=\(barcode!)&searchType=image&cx=\(engineKeyCSE)&key=\(apiKeyCSE)")
         
         getData(from: url!) { (data, response, error) in
             if let data = data{
@@ -50,7 +50,7 @@ final class Product{
     }
     
     public func getProductClass(completion: @escaping ((_ classifaction : String?) -> Void)) -> Void {
-        let url = URL(string: BarcodeDataBase.url + "/class/" + barcode!)
+        let url = URL(string: databaseURL + "/class/" + barcode!)
         
         getData(from: url!) { (data, response, error) in
             if let data = data{
@@ -65,7 +65,7 @@ final class Product{
     }
     
     public func getProductName(completion: @escaping ((_ name : String?) -> Void)) -> Void {
-        let url = URL(string: BarcodeDataBase.url + "/name/" + barcode!)
+        let url = URL(string: databaseURL + "/name/" + barcode!)
         
         getData(from: url!) { (data, response, error) in
             if let data = data{
