@@ -11,28 +11,25 @@ import SwiftEntryKit
 
 class ErrorPopup: UIView {
     
-    @IBOutlet var imageView: UIImageView!
+    @IBOutlet private weak var imageView: UIImageView!
     
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
     
-    @IBAction func dismissPressed(_ sender: Any) {
+    @IBAction private func dismissPressed(_ sender: UIButton) -> () {
         SwiftEntryKit.dismiss()
     }
     
-    public func show(withError error : Int) -> Void {
-        switch error {
-            case 404:
-                imageView.image = UIImage(named: "notFound")
-                
-                titleLabel.text = "Уупс!"
-                descriptionLabel.text = "Похоже, что в базе данных не нашлось продуктов с подходящим штрихкодом."
-            default:
-                imageView.image = UIImage(named: "sthWentWrong")
-                
-                titleLabel.text = "О нет!"
-                descriptionLabel.text = "Произошла непредвиденная ошибка, мы уже занимаемся над её исправлением."
-        }
+    public func configure(title : String, description : String, image : UIImage?) -> () {
+        self.titleLabel.text = title
+        self.descriptionLabel.text = description
+        self.imageView.image = image
+    }
+    
+    override func awakeFromNib() -> () {
+        super.awakeFromNib()
+        
+        self.layer.cornerRadius = 15
     }
 }
 

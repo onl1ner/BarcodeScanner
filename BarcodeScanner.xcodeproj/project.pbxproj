@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9220A0F0250132D4000562F3 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0EA250132D4000562F3 /* MainPresenter.swift */; };
+		9220A0F1250132D4000562F3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0EC250132D4000562F3 /* Product.swift */; };
+		9220A0F2250132D4000562F3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9220A0EE250132D4000562F3 /* MainViewController.xib */; };
+		9220A0F3250132D4000562F3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0EF250132D4000562F3 /* MainViewController.swift */; };
+		9220A0F6250132EC000562F3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0F5250132EC000562F3 /* UIViewController.swift */; };
+		9220A0FC250132F7000562F3 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0F9250132F7000562F3 /* CameraService.swift */; };
+		9220A0FD250132F7000562F3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0FB250132F7000562F3 /* NetworkService.swift */; };
 		924521112427AC360050F4DD /* BarcodeRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924521102427AC360050F4DD /* BarcodeRectangleView.swift */; };
-		9245211A2427B58A0050F4DD /* BarcodeDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924521192427B58A0050F4DD /* BarcodeDB.swift */; };
-		9245211C2427B59F0050F4DD /* GoogleSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9245211B2427B59F0050F4DD /* GoogleSearch.swift */; };
 		924521202427CCB00050F4DD /* ProductPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9245211F2427CCB00050F4DD /* ProductPopup.xib */; };
 		924521222427CCDA0050F4DD /* ProductPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924521212427CCDA0050F4DD /* ProductPopup.swift */; };
-		924521242427D5660050F4DD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924521232427D5660050F4DD /* Product.swift */; };
-		924521262427D6780050F4DD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924521252427D6780050F4DD /* Config.swift */; };
 		9254558024265D65007F5FD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254557F24265D65007F5FD4 /* AppDelegate.swift */; };
 		9254558224265D65007F5FD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254558124265D65007F5FD4 /* SceneDelegate.swift */; };
-		9254558724265D65007F5FD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9254558524265D65007F5FD4 /* Main.storyboard */; };
 		9254558924265D66007F5FD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9254558824265D66007F5FD4 /* Assets.xcassets */; };
 		9254558C24265D66007F5FD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9254558A24265D66007F5FD4 /* LaunchScreen.storyboard */; };
-		9254559424265F3E007F5FD4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254559324265F3E007F5FD4 /* MainViewController.swift */; };
+		92C31775250160EC000FC593 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C31774250160EC000FC593 /* Attributes.swift */; };
+		92C3177825016479000FC593 /* PopupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C3177725016479000FC593 /* PopupBuilder.swift */; };
+		92C3177B2501718B000FC593 /* GoogleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C3177A2501718B000FC593 /* GoogleResponse.swift */; };
 		92ECA709242920D000CCE0B7 /* ProximaNova-ExtrabldIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92ECA6DF242920D000CCE0B7 /* ProximaNova-ExtrabldIt.ttf */; };
 		92ECA70A242920D000CCE0B7 /* ProximaNovaCond-BoldIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92ECA6E0242920D000CCE0B7 /* ProximaNovaCond-BoldIt.ttf */; };
 		92ECA70B242920D000CCE0B7 /* ProximaNova-ThinIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92ECA6E1242920D000CCE0B7 /* ProximaNova-ThinIt.ttf */; };
@@ -70,21 +74,25 @@
 
 /* Begin PBXFileReference section */
 		79180CF1F92ACB640AF74021 /* Pods-BarcodeScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeScanner.debug.xcconfig"; path = "Target Support Files/Pods-BarcodeScanner/Pods-BarcodeScanner.debug.xcconfig"; sourceTree = "<group>"; };
+		9220A0EA250132D4000562F3 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		9220A0EC250132D4000562F3 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		9220A0EE250132D4000562F3 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		9220A0EF250132D4000562F3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9220A0F5250132EC000562F3 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		9220A0F9250132F7000562F3 /* CameraService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		9220A0FB250132F7000562F3 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		924521102427AC360050F4DD /* BarcodeRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeRectangleView.swift; sourceTree = "<group>"; };
-		924521192427B58A0050F4DD /* BarcodeDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeDB.swift; sourceTree = "<group>"; };
-		9245211B2427B59F0050F4DD /* GoogleSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSearch.swift; sourceTree = "<group>"; };
 		9245211F2427CCB00050F4DD /* ProductPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductPopup.xib; sourceTree = "<group>"; };
 		924521212427CCDA0050F4DD /* ProductPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPopup.swift; sourceTree = "<group>"; };
-		924521232427D5660050F4DD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		924521252427D6780050F4DD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		9254557C24265D65007F5FD4 /* BarcodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9254557F24265D65007F5FD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9254558124265D65007F5FD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9254558624265D65007F5FD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9254558824265D66007F5FD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9254558B24265D66007F5FD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9254558D24265D66007F5FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9254559324265F3E007F5FD4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		92C31774250160EC000FC593 /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
+		92C3177725016479000FC593 /* PopupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupBuilder.swift; sourceTree = "<group>"; };
+		92C3177A2501718B000FC593 /* GoogleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleResponse.swift; sourceTree = "<group>"; };
 		92ECA6DF242920D000CCE0B7 /* ProximaNova-ExtrabldIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-ExtrabldIt.ttf"; sourceTree = "<group>"; };
 		92ECA6E0242920D000CCE0B7 /* ProximaNovaCond-BoldIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaCond-BoldIt.ttf"; sourceTree = "<group>"; };
 		92ECA6E1242920D000CCE0B7 /* ProximaNova-ThinIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-ThinIt.ttf"; sourceTree = "<group>"; };
@@ -155,50 +163,95 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		924521122427B3C10050F4DD /* Classes */ = {
+		9220A0E8250132D4000562F3 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
-				924521182427B5600050F4DD /* Structures */,
-				924521152427B4E80050F4DD /* Extensions */,
-				924521142427B4BB0050F4DD /* Utils */,
-				924521132427B3CA0050F4DD /* ViewControllers */,
+				9220A0E9250132D4000562F3 /* Presenter */,
+				9220A0EB250132D4000562F3 /* Model */,
+				9220A0ED250132D4000562F3 /* View */,
 			);
-			path = Classes;
+			path = MainModule;
 			sourceTree = "<group>";
 		};
-		924521132427B3CA0050F4DD /* ViewControllers */ = {
+		9220A0E9250132D4000562F3 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				9254559324265F3E007F5FD4 /* MainViewController.swift */,
+				9220A0EA250132D4000562F3 /* MainPresenter.swift */,
 			);
-			path = ViewControllers;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
-		924521142427B4BB0050F4DD /* Utils */ = {
+		9220A0EB250132D4000562F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				924521102427AC360050F4DD /* BarcodeRectangleView.swift */,
-				924521232427D5660050F4DD /* Product.swift */,
-				924521252427D6780050F4DD /* Config.swift */,
+				9220A0EC250132D4000562F3 /* Product.swift */,
 			);
-			path = Utils;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		924521152427B4E80050F4DD /* Extensions */ = {
+		9220A0ED250132D4000562F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9220A0EE250132D4000562F3 /* MainViewController.xib */,
+				9220A0EF250132D4000562F3 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9220A0F4250132EC000562F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				92ECA737242A347800CCE0B7 /* View.swift */,
+				9220A0F5250132EC000562F3 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		924521182427B5600050F4DD /* Structures */ = {
+		9220A0F7250132F7000562F3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				924521192427B58A0050F4DD /* BarcodeDB.swift */,
-				9245211B2427B59F0050F4DD /* GoogleSearch.swift */,
+				9220A0F8250132F7000562F3 /* InputLayer */,
+				9220A0FA250132F7000562F3 /* NetworkLayer */,
+				92C3177625016463000FC593 /* OutputLayer */,
 			);
-			path = Structures;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9220A0F8250132F7000562F3 /* InputLayer */ = {
+			isa = PBXGroup;
+			children = (
+				9220A0F9250132F7000562F3 /* CameraService.swift */,
+			);
+			path = InputLayer;
+			sourceTree = "<group>";
+		};
+		9220A0FA250132F7000562F3 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				9220A0FB250132F7000562F3 /* NetworkService.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		9220A0FE25013368000562F3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				924521102427AC360050F4DD /* BarcodeRectangleView.swift */,
+				92C31774250160EC000FC593 /* Attributes.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		924521122427B3C10050F4DD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				92C317792501717C000FC593 /* APIModels */,
+				9220A0E8250132D4000562F3 /* MainModule */,
+				9220A0F7250132F7000562F3 /* Services */,
+				9220A0FE25013368000562F3 /* Helpers */,
+				9220A0F4250132EC000562F3 /* Extensions */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		9245211D2427CC370050F4DD /* UI */ = {
@@ -246,12 +299,27 @@
 				924521122427B3C10050F4DD /* Classes */,
 				9254557F24265D65007F5FD4 /* AppDelegate.swift */,
 				9254558124265D65007F5FD4 /* SceneDelegate.swift */,
-				9254558524265D65007F5FD4 /* Main.storyboard */,
 				9254558824265D66007F5FD4 /* Assets.xcassets */,
 				9254558A24265D66007F5FD4 /* LaunchScreen.storyboard */,
 				9254558D24265D66007F5FD4 /* Info.plist */,
 			);
 			path = BarcodeScanner;
+			sourceTree = "<group>";
+		};
+		92C3177625016463000FC593 /* OutputLayer */ = {
+			isa = PBXGroup;
+			children = (
+				92C3177725016479000FC593 /* PopupBuilder.swift */,
+			);
+			path = OutputLayer;
+			sourceTree = "<group>";
+		};
+		92C317792501717C000FC593 /* APIModels */ = {
+			isa = PBXGroup;
+			children = (
+				92C3177A2501718B000FC593 /* GoogleResponse.swift */,
+			);
+			path = APIModels;
 			sourceTree = "<group>";
 		};
 		92ECA6DE242920D000CCE0B7 /* ProximaNova */ = {
@@ -408,11 +476,11 @@
 				92ECA716242920D000CCE0B7 /* ProximaNovaExCn-BlackIt.ttf in Resources */,
 				92ECA721242920D000CCE0B7 /* ProximaNova-BlackIt.ttf in Resources */,
 				92ECA725242920D000CCE0B7 /* ProximaNova-SemiboldIt.ttf in Resources */,
-				9254558724265D65007F5FD4 /* Main.storyboard in Resources */,
 				92ECA71E242920D000CCE0B7 /* ProximaNova-Regular.ttf in Resources */,
 				92ECA718242920D000CCE0B7 /* ProximaNovaT-Thin.ttf in Resources */,
 				92ECA72B242920D000CCE0B7 /* ProximaNovaExCn-Black.ttf in Resources */,
 				92ECA71C242920D000CCE0B7 /* ProximaNovaExCn-Bold.ttf in Resources */,
+				9220A0F2250132D4000562F3 /* MainViewController.xib in Resources */,
 				92ECA710242920D000CCE0B7 /* ProximaNovaExCn-Thin.ttf in Resources */,
 				92ECA71A242920D000CCE0B7 /* ProximaNovaCond-Semibold.ttf in Resources */,
 				92ECA70B242920D000CCE0B7 /* ProximaNova-ThinIt.ttf in Resources */,
@@ -452,31 +520,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9245211C2427B59F0050F4DD /* GoogleSearch.swift in Sources */,
 				924521222427CCDA0050F4DD /* ProductPopup.swift in Sources */,
 				924521112427AC360050F4DD /* BarcodeRectangleView.swift in Sources */,
-				9245211A2427B58A0050F4DD /* BarcodeDB.swift in Sources */,
-				924521242427D5660050F4DD /* Product.swift in Sources */,
+				92C3177825016479000FC593 /* PopupBuilder.swift in Sources */,
+				9220A0FD250132F7000562F3 /* NetworkService.swift in Sources */,
 				9254558024265D65007F5FD4 /* AppDelegate.swift in Sources */,
-				924521262427D6780050F4DD /* Config.swift in Sources */,
+				92C3177B2501718B000FC593 /* GoogleResponse.swift in Sources */,
+				9220A0F3250132D4000562F3 /* MainViewController.swift in Sources */,
+				92C31775250160EC000FC593 /* Attributes.swift in Sources */,
+				9220A0FC250132F7000562F3 /* CameraService.swift in Sources */,
+				9220A0F0250132D4000562F3 /* MainPresenter.swift in Sources */,
 				9254558224265D65007F5FD4 /* SceneDelegate.swift in Sources */,
-				9254559424265F3E007F5FD4 /* MainViewController.swift in Sources */,
 				92ECA738242A347800CCE0B7 /* View.swift in Sources */,
 				92ECA73624292C7F00CCE0B7 /* ErrorPopup.swift in Sources */,
+				9220A0F1250132D4000562F3 /* Product.swift in Sources */,
+				9220A0F6250132EC000562F3 /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9254558524265D65007F5FD4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9254558624265D65007F5FD4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9254558A24265D66007F5FD4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -610,14 +674,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H72YUS24CN;
 				INFOPLIST_FILE = BarcodeScanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = onl1ner.BarcodeScanner;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ean.barcode.scanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -629,14 +695,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H72YUS24CN;
 				INFOPLIST_FILE = BarcodeScanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = onl1ner.BarcodeScanner;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ean.barcode.scanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

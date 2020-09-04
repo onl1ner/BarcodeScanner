@@ -1,6 +1,4 @@
-<p align="center">
-    <img src="https://raw.githubusercontent.com/onl1ner/BarcodeScanner/master/Images/BarcodeScannerRepositoryHeader.png"/>
-</p>
+![](https://github.com/onl1ner/onl1ner/blob/master/Resources/BarcodeScanner/Header.png?raw=true)
 
 # What is it?
 **BarcodeScanner – simple & easy application that helps you to scan both EAN8 and EAN13 barcodes.** 

@@ -9,8 +9,8 @@
 import UIKit
 
 extension UIView {
-    final func setupShadow(withColor color : CGColor, withOpacity opacity : Float, withOffset offset : CGSize) -> Void {
-        self.layer.shadowColor = color
+    final func setupShadow(withColor color : UIColor, withOpacity opacity : Float, withOffset offset : CGSize) -> Void {
+        self.layer.shadowColor = color.cgColor
         self.layer.shadowOpacity = opacity
         self.layer.shadowOffset = offset
     }

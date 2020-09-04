@@ -10,56 +10,41 @@ import UIKit
 import SwiftEntryKit
 
 final class ProductPopup: UIView {
-    @IBOutlet var productImageBackView: UIView!
-    @IBOutlet var productImage: UIImageView!
     
-    @IBOutlet var productClass: UILabel!
-    @IBOutlet var productName: UILabel!
+    @IBOutlet private weak var productImageBackView: UIView!
+    @IBOutlet private weak var productImageView: UIImageView!
     
-    @IBOutlet var barcodeBackView: UIView!
-    @IBOutlet var barcodeLabel: UILabel!
+    @IBOutlet private weak var productClass: UILabel!
+    @IBOutlet private weak var productName: UILabel!
     
-    @IBAction func dismissPressed(_ sender: Any) -> Void {
+    @IBOutlet private weak var barcodeBackView: UIView!
+    @IBOutlet private weak var barcodeLabel: UILabel!
+    
+    @IBAction private func dismissPressed(_ sender: UIButton) -> () {
         SwiftEntryKit.dismiss()
     }
     
-    public func setProductImage(whereImage image : UIImage) -> Void {
-        DispatchQueue.main.async {
-            self.productImageBackView.layer.cornerRadius = 20
-            
-            self.productImageBackView.setupShadow(withColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
-                                                  withOpacity: 0.2,
-                                                  withOffset: CGSize(width: 0,
-                                                                     height: 1))
-            
-            self.productImage.layer.cornerRadius = 15
-            
-            self.productImage.image = image
-        }
+    public func configure(barcode : String, classification : String,
+                          name : String, image : UIImage?) -> () {
+        productClass.text = classification
+        productName.text = name
+        
+        barcodeLabel.text = barcode
+        
+        productImageView.image = image
     }
     
-    public func setProductBarcode(whereBarcode barcode : String) -> Void {
-        DispatchQueue.main.async {
-            self.barcodeBackView.layer.cornerRadius = 15
-            
-            self.barcodeBackView.setupShadow(withColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
-                                             withOpacity: 0.2,
-                                             withOffset: CGSize(width: 0,
-                                                                height: 1))
-            
-            self.barcodeLabel.text = barcode
-        }
-    }
-    
-    public func setProductClass(whereClass classification : String) -> Void {
-        DispatchQueue.main.async {
-            self.productClass.text = classification
-        }
-    }
-    
-    public func setProductName(whereName name : String) -> Void {
-        DispatchQueue.main.async {
-            self.productName.text = name
-        }
+    override func awakeFromNib() -> () {
+        super.awakeFromNib()
+        
+        self.layer.cornerRadius = 15
+        
+        self.productImageBackView.layer.cornerRadius = 20
+        
+        self.barcodeBackView.layer.cornerRadius = 15
+        self.productImageView.layer.cornerRadius = 15
+        
+        self.productImageBackView.setupShadow(withColor: .black, withOpacity: 0.2, withOffset: .zero)
+        self.barcodeBackView.setupShadow(withColor: .black, withOpacity: 0.2, withOffset: .zero)
     }
 }

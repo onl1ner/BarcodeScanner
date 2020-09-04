@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="BarcodeScanner" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="k7B-DC-jQ7" id="6BD-xG-lWf"/>
+                <outlet property="blurEffectView" destination="Yzg-Eb-CfE" id="llH-QM-4jw"/>
+                <outlet property="toggleFlashlightButton" destination="zUT-bj-NyF" id="yeV-nG-R9F"/>
+                <outlet property="view" destination="iN0-l3-epB" id="XFj-jZ-eaS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUT-bj-NyF">
+                    <rect key="frame" x="318.5" y="32" width="24.5" height="31.5"/>
+                    <state key="normal" image="bolt.fill" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
+                    </state>
+                    <connections>
+                        <action selector="toggleFlashlight:" destination="-1" eventType="touchUpInside" id="yI8-RC-7n6"/>
+                    </connections>
+                </button>
+                <visualEffectView hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yzg-Eb-CfE">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iVP-4j-uWe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="k7B-DC-jQ7">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="k7B-DC-jQ7" firstAttribute="centerY" secondItem="iVP-4j-uWe" secondAttribute="centerY" id="AHf-JB-kiw"/>
+                            <constraint firstItem="k7B-DC-jQ7" firstAttribute="centerX" secondItem="iVP-4j-uWe" secondAttribute="centerX" id="hpw-hk-tZF"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zUT-bj-NyF" secondAttribute="trailing" constant="32" id="Ae1-OW-UDs"/>
+                <constraint firstItem="zUT-bj-NyF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="Jdq-Uf-E0G"/>
+                <constraint firstItem="Yzg-Eb-CfE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Kkd-gn-XQS"/>
+                <constraint firstAttribute="trailing" secondItem="Yzg-Eb-CfE" secondAttribute="trailing" id="VFI-Mb-7bT"/>
+                <constraint firstItem="Yzg-Eb-CfE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="d2m-Py-oFs"/>
+                <constraint firstAttribute="bottom" secondItem="Yzg-Eb-CfE" secondAttribute="bottom" id="ekj-fT-5hZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bolt.fill" catalog="system" width="101" height="128"/>
+    </resources>
+</document>

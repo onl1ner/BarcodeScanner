@@ -10,7 +10,7 @@
 import UIKit
 import CoreGraphics
 
-final class RectangleView : UIView{
+final class RectangleView : UIView {
     
     public var sizeMultiplier : CGFloat = 0.2 {
         didSet{
@@ -50,33 +50,33 @@ final class RectangleView : UIView{
         /// Первая часть левого верхнего угла
         currentContext?.beginPath()
         currentContext?.move(to: CGPoint(x: 0, y: 0))
-        currentContext?.addLine(to: CGPoint(x: self.bounds.size.width*sizeMultiplier, y: 0))
+        currentContext?.addLine(to: CGPoint(x: self.bounds.size.width * sizeMultiplier, y: 0))
         currentContext?.strokePath()
 
         /// Правый верхний угол
         currentContext?.beginPath()
-        currentContext?.move(to: CGPoint(x: self.bounds.size.width - self.bounds.size.width*sizeMultiplier, y: 0))
+        currentContext?.move(to: CGPoint(x: self.bounds.size.width - self.bounds.size.width * sizeMultiplier, y: 0))
         currentContext?.addLine(to: CGPoint(x: self.bounds.size.width, y: 0))
-        currentContext?.addLine(to: CGPoint(x: self.bounds.size.width, y: self.bounds.size.height*sizeMultiplier))
+        currentContext?.addLine(to: CGPoint(x: self.bounds.size.width, y: self.bounds.size.height * sizeMultiplier))
         currentContext?.strokePath()
 
         /// Правый нижний угол
         currentContext?.beginPath()
-        currentContext?.move(to: CGPoint(x: self.bounds.size.width, y: self.bounds.size.height - self.bounds.size.height*sizeMultiplier))
+        currentContext?.move(to: CGPoint(x: self.bounds.size.width, y: self.bounds.size.height - self.bounds.size.height * sizeMultiplier))
         currentContext?.addLine(to: CGPoint(x: self.bounds.size.width, y: self.bounds.size.height))
-        currentContext?.addLine(to: CGPoint(x: self.bounds.size.width - self.bounds.size.width*sizeMultiplier, y: self.bounds.size.height))
+        currentContext?.addLine(to: CGPoint(x: self.bounds.size.width - self.bounds.size.width * sizeMultiplier, y: self.bounds.size.height))
         currentContext?.strokePath()
 
         /// Левый нижний угол
         currentContext?.beginPath()
-        currentContext?.move(to: CGPoint(x: self.bounds.size.width*sizeMultiplier, y: self.bounds.size.height))
+        currentContext?.move(to: CGPoint(x: self.bounds.size.width * sizeMultiplier, y: self.bounds.size.height))
         currentContext?.addLine(to: CGPoint(x: 0, y: self.bounds.size.height))
-        currentContext?.addLine(to: CGPoint(x: 0, y: self.bounds.size.height - self.bounds.size.height*sizeMultiplier))
+        currentContext?.addLine(to: CGPoint(x: 0, y: self.bounds.size.height - self.bounds.size.height * sizeMultiplier))
         currentContext?.strokePath()
 
         /// Вторая часть левого верхнего угла
         currentContext?.beginPath()
-        currentContext?.move(to: CGPoint(x: 0, y: self.bounds.size.height*sizeMultiplier))
+        currentContext?.move(to: CGPoint(x: 0, y: self.bounds.size.height * sizeMultiplier))
         currentContext?.addLine(to: CGPoint(x: 0, y: 0))
         currentContext?.strokePath()
     }
