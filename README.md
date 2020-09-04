@@ -1,12 +1,14 @@
-![](https://github.com/onl1ner/onl1ner/blob/master/Resources/BarcodeScanner/Header.png?raw=true)
+![](https://github.com/onl1ner/onl1ner/blob/master/Resources/BarcodeScanner/Header.png)
 
-# What is it?
+## What is it?
 **BarcodeScanner – simple & easy application that helps you to scan both EAN8 and EAN13 barcodes.** 
-# How the app works
+
+## How the app works
 To scan a barcode simply point the camera at the code and you are done! No need to press a button or take a photo. Application will automaticaly recognise the code your camera pointing at. 
 
-BarcodeScanner will give you information related to scanned product. Name of the product, it's class(if classified) and product's photo. To recognise the name and class application uses API of [OlegON's database](https://barcodes.olegon.ru "olegon's database"). The photos are simply downloaded from Google via their [Google Custom Search API](https://developers.google.com/custom-search "Google Custom Search API").
-# License
+BarcodeScanner will give you information related to scanned product. Name of the product, it's class(if classified) and product's photo. To recognise the name and class application uses API of [OlegON's database](https://barcodes.olegon.ru "OlegON's database"). The photos are simply downloaded from Google via their [Google Custom Search API](https://developers.google.com/custom-search "Google Custom Search API").
+
+## License
 This application is distributed under the terms and conditions of the MIT license.
 ```
 Copyright (c) 2020 Tamerlan Satualdypov
