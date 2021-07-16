@@ -1,6 +1,0 @@
-module Pods_BarcodeScanner {
-  umbrella header "Pods-BarcodeScanner-umbrella.h"
-
-  export *
-  module * { export * }
-}

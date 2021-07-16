@@ -1,1 +1,0 @@
-../../../Target Support Files/SwiftEntryKit/SwiftEntryKit-umbrella.h
