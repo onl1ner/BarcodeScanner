@@ -9,9 +9,11 @@
 import UIKit
 import SwiftEntryKit
 
-protocol MainViewControllerProtocol: AnyObject {
-    func startInput() -> ()
+protocol MainViewControllerProtocol: AnyObject, STModalDelegate {
     func stopInput() -> ()
+    
+    func startLoading() -> ()
+    func stopLoading() -> ()
 }
 
 final class MainViewController: UIViewController, MainViewControllerProtocol {
@@ -43,20 +45,25 @@ final class MainViewController: UIViewController, MainViewControllerProtocol {
         self.camera.start()
     }
     
-    public func startInput() -> () {
+    private func startInput() -> () {
         self.camera.start()
         
         UIView.animate(withDuration: 0.2) {
             self.blurEffectView.alpha = 0.0
         } completion: { _ in
             self.blurEffectView.isHidden = true
-            self.activityIndicator.stopAnimating()
         }
     }
     
-    public func stopInput() -> () {
+    public func startLoading() -> () {
         self.activityIndicator.startAnimating()
-        
+    }
+    
+    public func stopLoading() -> () {
+        self.activityIndicator.stopAnimating()
+    }
+    
+    public func stopInput() -> () {
         self.blurEffectView.isHidden = false
         
         UIView.animate(withDuration: 0.2) {
@@ -85,6 +92,14 @@ extension MainViewController: STCameraDelegate {
     
     public func scanned(barcode: String) -> () {
         self.presenter.product(for: barcode)
+    }
+    
+}
+
+extension MainViewController: STModalDelegate {
+    
+    public func modalDidDisappear() -> () {
+        self.startInput()
     }
     
 }

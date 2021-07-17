@@ -8,15 +8,8 @@
 
 import UIKit
 
-enum HTTPError : Error {
-    case transportError(Error)
-    case badRequest
-    case notFound
-    case unexpected
-}
-
 protocol NetworkServiceProtocol {
-    static func getProduct(withBarcode barcode : String, completion: @escaping (Product?, HTTPError?) -> ()) -> ()
+    static func getProduct(withBarcode barcode : String, completion: @escaping (Product?, NetworkError?) -> ()) -> ()
 }
 
 final class NetworkService : NetworkServiceProtocol {
@@ -37,7 +30,7 @@ final class NetworkService : NetworkServiceProtocol {
     }
     
     private static func retrieveAndSerialize<T : Decodable>(_ objectType : T.Type, from url : URL?,
-                                                            completion: @escaping (Result<T, HTTPError>) -> ()) -> () {
+                                                            completion: @escaping (Result<T, NetworkError>) -> ()) -> () {
         createDataTask(with: url) { (data, response, error) in
             if let error = error {
                 completion(.failure(.transportError(error)))
@@ -91,7 +84,7 @@ final class NetworkService : NetworkServiceProtocol {
     }
     
     /// Функция получает наименование продукта.
-    private static func getProductName(barcode : String, completion: @escaping (String?, HTTPError?) -> ()) -> () {
+    private static func getProductName(barcode : String, completion: @escaping (String?, NetworkError?) -> ()) -> () {
         let url = URL(string: dataLocation + "/name/\(barcode)")
         
         retrieveAndSerialize(Product.Name.self, from: url) { (result) in
@@ -118,12 +111,12 @@ final class NetworkService : NetworkServiceProtocol {
         }
     }
     
-    public static func getProduct(withBarcode barcode : String, completion: @escaping (Product?, HTTPError?) -> ()) -> () {
+    public static func getProduct(withBarcode barcode : String, completion: @escaping (Product?, NetworkError?) -> ()) -> () {
         var classification : String = "Не классифицирован"
         var name : String = "Наименование продукта"
         var image : UIImage?
         
-        var error : HTTPError?
+        var error : NetworkError?
         
         let group : DispatchGroup = .init()
         

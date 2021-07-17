@@ -21,8 +21,11 @@ final class MainPresenter: MainPresenterProtocol {
     
     public func product(for barcode: String) -> () {
         self.view?.stopInput()
+        self.view?.startLoading()
         
         NetworkService.getProduct(withBarcode: barcode) { [weak self] (product, error) in
+            self?.view?.stopLoading()
+            
             if let error = error {
                 self?.router.show(error: error)
                 return

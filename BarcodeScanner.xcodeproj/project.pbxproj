@@ -12,6 +12,9 @@
 		0806B0BB26A2BD7B00489884 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0BA26A2BD7B00489884 /* MainBuilder.swift */; };
 		0806B0BF26A2C14700489884 /* STModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0BE26A2C14700489884 /* STModal.swift */; };
 		0806B0C226A2C17000489884 /* STAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0C126A2C16F00489884 /* STAlert.swift */; };
+		0806B0C526A2C2F900489884 /* ErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0C426A2C2F900489884 /* ErrorPresenter.swift */; };
+		0806B0C826A2C3F700489884 /* ErrorBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0C726A2C3F700489884 /* ErrorBuilder.swift */; };
+		0806B0CB26A2C4B400489884 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0CA26A2C4B400489884 /* NetworkError.swift */; };
 		9220A0F0250132D4000562F3 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0EA250132D4000562F3 /* MainPresenter.swift */; };
 		9220A0F1250132D4000562F3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0EC250132D4000562F3 /* Product.swift */; };
 		9220A0F2250132D4000562F3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9220A0EE250132D4000562F3 /* MainViewController.xib */; };
@@ -27,14 +30,13 @@
 		9254558924265D66007F5FD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9254558824265D66007F5FD4 /* Assets.xcassets */; };
 		9254558C24265D66007F5FD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9254558A24265D66007F5FD4 /* LaunchScreen.storyboard */; };
 		92C31775250160EC000FC593 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C31774250160EC000FC593 /* Attributes.swift */; };
-		92C3177825016479000FC593 /* PopupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C3177725016479000FC593 /* PopupBuilder.swift */; };
 		92C3177B2501718B000FC593 /* GoogleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C3177A2501718B000FC593 /* GoogleResponse.swift */; };
 		92ECA710242920D000CCE0B7 /* ProximaNovaExCn-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92ECA6E6242920D000CCE0B7 /* ProximaNovaExCn-Thin.ttf */; };
 		92ECA711242920D000CCE0B7 /* ProximaNovaExCn-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92ECA6E7242920D000CCE0B7 /* ProximaNovaExCn-Light.ttf */; };
 		92ECA717242920D000CCE0B7 /* ProximaNovaExCn-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92ECA6ED242920D000CCE0B7 /* ProximaNovaExCn-Regular.ttf */; };
 		92ECA71C242920D000CCE0B7 /* ProximaNovaExCn-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92ECA6F2242920D000CCE0B7 /* ProximaNovaExCn-Bold.ttf */; };
-		92ECA7342429297E00CCE0B7 /* ErrorPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92ECA7332429297E00CCE0B7 /* ErrorPopup.xib */; };
-		92ECA73624292C7F00CCE0B7 /* ErrorPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ECA73524292C7F00CCE0B7 /* ErrorPopup.swift */; };
+		92ECA7342429297E00CCE0B7 /* ErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92ECA7332429297E00CCE0B7 /* ErrorViewController.xib */; };
+		92ECA73624292C7F00CCE0B7 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ECA73524292C7F00CCE0B7 /* ErrorViewController.swift */; };
 		92ECA738242A347800CCE0B7 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ECA737242A347800CCE0B7 /* UIView.swift */; };
 		E9EF20C0E411E9E836F053D9 /* libPods-BarcodeScanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F63026D1ABCF9F9F9E9B3E1D /* libPods-BarcodeScanner.a */; };
 /* End PBXBuildFile section */
@@ -45,6 +47,9 @@
 		0806B0BA26A2BD7B00489884 /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
 		0806B0BE26A2C14700489884 /* STModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STModal.swift; sourceTree = "<group>"; };
 		0806B0C126A2C16F00489884 /* STAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STAlert.swift; sourceTree = "<group>"; };
+		0806B0C426A2C2F900489884 /* ErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresenter.swift; sourceTree = "<group>"; };
+		0806B0C726A2C3F700489884 /* ErrorBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBuilder.swift; sourceTree = "<group>"; };
+		0806B0CA26A2C4B400489884 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		79180CF1F92ACB640AF74021 /* Pods-BarcodeScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeScanner.debug.xcconfig"; path = "Target Support Files/Pods-BarcodeScanner/Pods-BarcodeScanner.debug.xcconfig"; sourceTree = "<group>"; };
 		9220A0EA250132D4000562F3 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		9220A0EC250132D4000562F3 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -63,14 +68,13 @@
 		9254558B24265D66007F5FD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9254558D24265D66007F5FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92C31774250160EC000FC593 /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
-		92C3177725016479000FC593 /* PopupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupBuilder.swift; sourceTree = "<group>"; };
 		92C3177A2501718B000FC593 /* GoogleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleResponse.swift; sourceTree = "<group>"; };
 		92ECA6E6242920D000CCE0B7 /* ProximaNovaExCn-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaExCn-Thin.ttf"; sourceTree = "<group>"; };
 		92ECA6E7242920D000CCE0B7 /* ProximaNovaExCn-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaExCn-Light.ttf"; sourceTree = "<group>"; };
 		92ECA6ED242920D000CCE0B7 /* ProximaNovaExCn-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaExCn-Regular.ttf"; sourceTree = "<group>"; };
 		92ECA6F2242920D000CCE0B7 /* ProximaNovaExCn-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaExCn-Bold.ttf"; sourceTree = "<group>"; };
-		92ECA7332429297E00CCE0B7 /* ErrorPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorPopup.xib; sourceTree = "<group>"; };
-		92ECA73524292C7F00CCE0B7 /* ErrorPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopup.swift; sourceTree = "<group>"; };
+		92ECA7332429297E00CCE0B7 /* ErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorViewController.xib; sourceTree = "<group>"; };
+		92ECA73524292C7F00CCE0B7 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		92ECA737242A347800CCE0B7 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		EF879855EA857755783B90DA /* Pods-BarcodeScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeScanner.release.xcconfig"; path = "Target Support Files/Pods-BarcodeScanner/Pods-BarcodeScanner.release.xcconfig"; sourceTree = "<group>"; };
 		F63026D1ABCF9F9F9E9B3E1D /* libPods-BarcodeScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BarcodeScanner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +141,30 @@
 				0806B0C126A2C16F00489884 /* STAlert.swift */,
 			);
 			path = STAlert;
+			sourceTree = "<group>";
+		};
+		0806B0C326A2C2EE00489884 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0806B0C426A2C2F900489884 /* ErrorPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0806B0C626A2C3E600489884 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				0806B0C726A2C3F700489884 /* ErrorBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		0806B0C926A2C48D00489884 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0806B0CA26A2C4B400489884 /* NetworkError.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		08FBAB7926A20BA000DF4592 /* Supporting Files */ = {
@@ -215,7 +243,10 @@
 		08FBAB8026A20DA200DF4592 /* Error */ = {
 			isa = PBXGroup;
 			children = (
+				0806B0C926A2C48D00489884 /* Model */,
 				08FBAB8126A20DA700DF4592 /* View */,
+				0806B0C326A2C2EE00489884 /* Presenter */,
+				0806B0C626A2C3E600489884 /* Builder */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -223,8 +254,8 @@
 		08FBAB8126A20DA700DF4592 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				92ECA7332429297E00CCE0B7 /* ErrorPopup.xib */,
-				92ECA73524292C7F00CCE0B7 /* ErrorPopup.swift */,
+				92ECA7332429297E00CCE0B7 /* ErrorViewController.xib */,
+				92ECA73524292C7F00CCE0B7 /* ErrorViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -275,7 +306,6 @@
 			isa = PBXGroup;
 			children = (
 				9220A0FA250132F7000562F3 /* NetworkLayer */,
-				92C3177625016463000FC593 /* OutputLayer */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -323,14 +353,6 @@
 				08FBAB7926A20BA000DF4592 /* Supporting Files */,
 			);
 			path = BarcodeScanner;
-			sourceTree = "<group>";
-		};
-		92C3177625016463000FC593 /* OutputLayer */ = {
-			isa = PBXGroup;
-			children = (
-				92C3177725016479000FC593 /* PopupBuilder.swift */,
-			);
-			path = OutputLayer;
 			sourceTree = "<group>";
 		};
 		92ECA6DE242920D000CCE0B7 /* Font */ = {
@@ -411,7 +433,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92ECA7342429297E00CCE0B7 /* ErrorPopup.xib in Resources */,
+				92ECA7342429297E00CCE0B7 /* ErrorViewController.xib in Resources */,
 				9254558C24265D66007F5FD4 /* LaunchScreen.storyboard in Resources */,
 				92ECA711242920D000CCE0B7 /* ProximaNovaExCn-Light.ttf in Resources */,
 				9254558924265D66007F5FD4 /* Assets.xcassets in Resources */,
@@ -457,22 +479,24 @@
 			files = (
 				924521222427CCDA0050F4DD /* ProductView.swift in Sources */,
 				924521112427AC360050F4DD /* BarcodeRectangleView.swift in Sources */,
-				92C3177825016479000FC593 /* PopupBuilder.swift in Sources */,
+				0806B0CB26A2C4B400489884 /* NetworkError.swift in Sources */,
 				0806B0B726A2BBB600489884 /* MainRouter.swift in Sources */,
 				9220A0FD250132F7000562F3 /* NetworkService.swift in Sources */,
 				9254558024265D65007F5FD4 /* AppDelegate.swift in Sources */,
 				92C3177B2501718B000FC593 /* GoogleResponse.swift in Sources */,
 				9220A0F3250132D4000562F3 /* MainViewController.swift in Sources */,
+				0806B0C826A2C3F700489884 /* ErrorBuilder.swift in Sources */,
 				92C31775250160EC000FC593 /* Attributes.swift in Sources */,
 				9220A0FC250132F7000562F3 /* STCamera.swift in Sources */,
 				9220A0F0250132D4000562F3 /* MainPresenter.swift in Sources */,
 				9254558224265D65007F5FD4 /* SceneDelegate.swift in Sources */,
 				0806B0B326A2B96400489884 /* FlashlightStatus.swift in Sources */,
 				92ECA738242A347800CCE0B7 /* UIView.swift in Sources */,
+				0806B0C526A2C2F900489884 /* ErrorPresenter.swift in Sources */,
 				0806B0BF26A2C14700489884 /* STModal.swift in Sources */,
 				0806B0C226A2C17000489884 /* STAlert.swift in Sources */,
 				0806B0BB26A2BD7B00489884 /* MainBuilder.swift in Sources */,
-				92ECA73624292C7F00CCE0B7 /* ErrorPopup.swift in Sources */,
+				92ECA73624292C7F00CCE0B7 /* ErrorViewController.swift in Sources */,
 				9220A0F1250132D4000562F3 /* Product.swift in Sources */,
 				9220A0F6250132EC000562F3 /* UIViewController.swift in Sources */,
 			);
