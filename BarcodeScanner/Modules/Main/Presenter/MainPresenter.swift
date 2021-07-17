@@ -8,40 +8,37 @@
 
 import UIKit
 
-protocol MainPresenterProtocol : CameraDelegate {
-    func product(for barcode : String) -> ()
+protocol MainPresenterProtocol {
+    func product(for barcode: String) -> ()
     
-    init(view : MainViewControllerProtocol)
+    init(view: MainViewControllerProtocol, router: MainRouterProtocol)
 }
 
-final class MainPresenter : MainPresenterProtocol {
+final class MainPresenter: MainPresenterProtocol {
     
-    private weak var view : MainViewControllerProtocol?
+    private weak var view: MainViewControllerProtocol?
+    private var router: MainRouterProtocol
     
     public func product(for barcode: String) -> () {
+        self.view?.stopInput()
+        
         NetworkService.getProduct(withBarcode: barcode) { [weak self] (product, error) in
-            if let httpError = error {
-                self?.view?.show(error: httpError)
+            if let error = error {
+                self?.router.show(error: error)
                 return
             }
             
             guard let product = product else {
-                fatalError("Product is nil at \(#function) on \(#line)")
+                self?.router.show(error: .unexpected)
+                return
             }
             
-            self?.view?.show(product: product)
+            self?.router.show(product: product)
         }
     }
     
-    init(view : MainViewControllerProtocol) {
+    init(view: MainViewControllerProtocol, router: MainRouterProtocol) {
         self.view = view
+        self.router = router
     }
-}
-
-extension MainPresenter : CameraDelegate {
-    
-    public func scanned(barcode: String) -> () {
-        self.product(for: barcode)
-    }
-    
 }

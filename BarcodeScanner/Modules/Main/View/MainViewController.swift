@@ -9,85 +9,82 @@
 import UIKit
 import SwiftEntryKit
 
-protocol MainViewControllerProtocol : AnyObject {
-    func show(product : Product) -> ()
-    func show(error : HTTPError) -> ()
-    
+protocol MainViewControllerProtocol: AnyObject {
     func startInput() -> ()
+    func stopInput() -> ()
 }
 
-class MainViewController: UIViewController, MainViewControllerProtocol {
+final class MainViewController: UIViewController, MainViewControllerProtocol {
     
-    @IBOutlet private weak var toggleFlashlightButton: UIButton!
+    @IBOutlet private weak var toggleFlashlightButton : UIButton!
     
-    @IBOutlet private weak var blurEffectView: UIVisualEffectView!
-    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var blurEffectView : UIVisualEffectView!
+    @IBOutlet private weak var activityIndicator : UIActivityIndicatorView!
     
-    private lazy var camera = Camera(frame: view.layer.bounds, delegate: self.presenter)
+    private lazy var camera : CameraProtocol = Camera(frame: self.view.layer.bounds, delegate: self)
     
     public var presenter : MainPresenterProtocol!
     
-    public var popupBuilder : PopupBuilderProtocol?
-    
-    @IBAction func toggleFlashlight(_ sender: UIButton) -> () {
-        let status = camera.toggleFlashlight()
+    @IBAction private func toggleFlashlight(_ sender: UIButton) -> () {
+        let status = self.camera.toggleFlashlight()
         
         switch status {
-            case .on: sender.setImage(UIImage(systemName: "bolt.slash.fill"), for: .normal)
-            case .off: sender.setImage(UIImage(systemName: "bolt.fill"), for: .normal)
+            case .on: sender.setImage(UIImage(systemName: "bolt.slash.circle.fill"), for: .normal)
+            case .off: sender.setImage(UIImage(systemName: "bolt.circle.fill"), for: .normal)
             case .notFound: self.showAlert(title: "Произошла ошибка", message: "Похоже, что на вашем устройстве нет фонарика.")
             case .notInitialized: self.showAlert(title: "Произошла ошибка", message: "Не удалось переключить фонарик. Попробуйте еще раз.")
         }
     }
     
     private func createCamera() -> () {
-        guard let cameraLayer = camera.layer else { return }
+        guard let cameraLayer = self.camera.layer else { return }
         self.view.layer.addSublayer(cameraLayer)
-    }
-    
-    public func show(product: Product) -> () {
-        self.activityIndicator.stopAnimating()
         
-        popupBuilder?.show(product: product)
-    }
-    
-    public func show(error: HTTPError) -> () {
-        self.activityIndicator.stopAnimating()
-        
-        popupBuilder?.show(error: error)
+        self.camera.start()
     }
     
     public func startInput() -> () {
-        camera.start()
+        self.camera.start()
         
-        UIView.animate(withDuration: 0.2, animations: {
+        UIView.animate(withDuration: 0.2) {
             self.blurEffectView.alpha = 0.0
-        }, completion: { _ in self.blurEffectView.isHidden = true })
+        } completion: { _ in
+            self.blurEffectView.isHidden = true
+            self.activityIndicator.stopAnimating()
+        }
     }
     
-    public func output(output: String) {
-        self.blurEffectView.isHidden = false
+    public func stopInput() -> () {
         self.activityIndicator.startAnimating()
+        
+        self.blurEffectView.isHidden = false
         
         UIView.animate(withDuration: 0.2) {
             self.blurEffectView.alpha = 1.0
         }
         
-        camera.stop()
+        self.camera.stop()
     }
     
-    override func viewDidLoad() -> () {
+    override public func viewDidLoad() -> () {
         super.viewDidLoad()
         
-        createCamera()
-        camera.start()
+        self.createCamera()
         
-        self.view.bringSubviewToFront(toggleFlashlightButton)
-        self.view.bringSubviewToFront(blurEffectView)
+        self.view.bringSubviewToFront(self.toggleFlashlightButton)
+        self.view.bringSubviewToFront(self.blurEffectView)
     }
     
-    override func viewDidLayoutSubviews() -> () {
+    override public func viewDidLayoutSubviews() -> () {
         super.viewDidLayoutSubviews()
-        camera.frame = view.layer.bounds
+        self.camera.frame = view.layer.bounds
     }
+}
+
+extension MainViewController: CameraDelegate {
+    
+    public func scanned(barcode: String) -> () {
+        self.presenter.product(for: barcode)
+    }
+    
 }

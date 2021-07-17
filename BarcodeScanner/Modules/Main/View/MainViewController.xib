@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,9 +22,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUT-bj-NyF">
-                    <rect key="frame" x="318.5" y="32" width="24.5" height="31.5"/>
-                    <state key="normal" image="bolt.fill" catalog="system">
-                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
+                    <rect key="frame" x="321" y="32" width="38" height="36"/>
+                    <state key="normal" image="bolt.circle.fill" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32"/>
                     </state>
                     <connections>
                         <action selector="toggleFlashlight:" destination="-1" eventType="touchUpInside" id="yI8-RC-7n6"/>
@@ -46,20 +48,23 @@
                     <blurEffect style="regular"/>
                 </visualEffectView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zUT-bj-NyF" secondAttribute="trailing" constant="32" id="Ae1-OW-UDs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zUT-bj-NyF" secondAttribute="trailing" constant="16" id="Ae1-OW-UDs"/>
                 <constraint firstItem="zUT-bj-NyF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="Jdq-Uf-E0G"/>
                 <constraint firstItem="Yzg-Eb-CfE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Kkd-gn-XQS"/>
                 <constraint firstAttribute="trailing" secondItem="Yzg-Eb-CfE" secondAttribute="trailing" id="VFI-Mb-7bT"/>
                 <constraint firstItem="Yzg-Eb-CfE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="d2m-Py-oFs"/>
                 <constraint firstAttribute="bottom" secondItem="Yzg-Eb-CfE" secondAttribute="bottom" id="ekj-fT-5hZ"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="154"/>
         </view>
     </objects>
     <resources>
-        <image name="bolt.fill" catalog="system" width="101" height="128"/>
+        <image name="bolt.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

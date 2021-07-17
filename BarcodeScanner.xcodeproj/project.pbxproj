@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0806B0B326A2B96400489884 /* FlashlightStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0B226A2B96400489884 /* FlashlightStatus.swift */; };
+		0806B0B726A2BBB600489884 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0B626A2BBB600489884 /* MainRouter.swift */; };
+		0806B0BB26A2BD7B00489884 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0BA26A2BD7B00489884 /* MainBuilder.swift */; };
 		9220A0F0250132D4000562F3 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0EA250132D4000562F3 /* MainPresenter.swift */; };
 		9220A0F1250132D4000562F3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0EC250132D4000562F3 /* Product.swift */; };
 		9220A0F2250132D4000562F3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9220A0EE250132D4000562F3 /* MainViewController.xib */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		0806B0B226A2B96400489884 /* FlashlightStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashlightStatus.swift; sourceTree = "<group>"; };
+		0806B0B626A2BBB600489884 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		0806B0BA26A2BD7B00489884 /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
 		79180CF1F92ACB640AF74021 /* Pods-BarcodeScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeScanner.debug.xcconfig"; path = "Target Support Files/Pods-BarcodeScanner/Pods-BarcodeScanner.debug.xcconfig"; sourceTree = "<group>"; };
 		9220A0EA250132D4000562F3 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		9220A0EC250132D4000562F3 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -97,6 +101,22 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
+		0806B0B526A2BBAD00489884 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0806B0B626A2BBB600489884 /* MainRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		0806B0B926A2BD7400489884 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				0806B0BA26A2BD7B00489884 /* MainBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		08FBAB7926A20BA000DF4592 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +146,8 @@
 				9220A0EB250132D4000562F3 /* Model */,
 				9220A0ED250132D4000562F3 /* View */,
 				9220A0E9250132D4000562F3 /* Presenter */,
+				0806B0B526A2BBAD00489884 /* Router */,
+				0806B0B926A2BD7400489884 /* Builder */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -414,6 +436,7 @@
 				924521222427CCDA0050F4DD /* ProductView.swift in Sources */,
 				924521112427AC360050F4DD /* BarcodeRectangleView.swift in Sources */,
 				92C3177825016479000FC593 /* PopupBuilder.swift in Sources */,
+				0806B0B726A2BBB600489884 /* MainRouter.swift in Sources */,
 				9220A0FD250132F7000562F3 /* NetworkService.swift in Sources */,
 				9254558024265D65007F5FD4 /* AppDelegate.swift in Sources */,
 				92C3177B2501718B000FC593 /* GoogleResponse.swift in Sources */,
@@ -424,6 +447,7 @@
 				9254558224265D65007F5FD4 /* SceneDelegate.swift in Sources */,
 				0806B0B326A2B96400489884 /* FlashlightStatus.swift in Sources */,
 				92ECA738242A347800CCE0B7 /* UIView.swift in Sources */,
+				0806B0BB26A2BD7B00489884 /* MainBuilder.swift in Sources */,
 				92ECA73624292C7F00CCE0B7 /* ErrorPopup.swift in Sources */,
 				9220A0F1250132D4000562F3 /* Product.swift in Sources */,
 				9220A0F6250132EC000562F3 /* UIViewController.swift in Sources */,
