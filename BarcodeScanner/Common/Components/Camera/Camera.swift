@@ -9,71 +9,80 @@
 import UIKit
 import AVFoundation
 
-enum FlashlightStatus {
-    case off
-    case on
-    
-    case notFound
-    case notInitialized
+protocol CameraDelegate {
+    func scanned(barcode : String) -> ()
 }
 
-protocol CameraServiceProtocol : class {
-    var cameraLayer : AVCaptureVideoPreviewLayer? { get }
+protocol CameraProtocol : AnyObject {
+    var layer : AVCaptureVideoPreviewLayer? { get }
     var frame : CGRect { get set }
     
-    func stop() -> ()
     func start() -> ()
+    func stop() -> ()
     
     func toggleFlashlight() -> FlashlightStatus
     
-    init(frame : CGRect, at view : CameraControllerProtocol)
+    init(frame : CGRect, delegate : CameraDelegate?)
 }
 
-final class CameraService : NSObject, CameraServiceProtocol {
+final class Camera : NSObject, CameraProtocol {
     
     private let codeTypes: [AVMetadataObject.ObjectType] = [.ean8, .ean13]
     
     private var captureSession : AVCaptureSession = .init()
+    private var delegate : CameraDelegate?
     
-    private weak var view : CameraControllerProtocol?
+    private var scanArea : RectangleView = .init(frame: .init(x: 0, y: 0, width: 250.0, height: 100.0))
     
-    public var cameraLayer : AVCaptureVideoPreviewLayer?
+    public var layer : AVCaptureVideoPreviewLayer?
     
-    public var frame: CGRect {
+    public var frame : CGRect {
         didSet {
-            cameraLayer?.frame = frame
+            self.layer?.frame = self.frame
+            self.scanArea.center = self.center
         }
     }
     
-    private func create(frame : CGRect) -> () {
+    public var center : CGPoint {
+        return .init(x: self.frame.width / 2, y: self.frame.height / 2)
+    }
+    
+    private func configure() -> () {
         guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
         
         do {
             // Добавляем инпут как инстанс класса AVCaptureDeviceInput полученного девайса
             let input = try AVCaptureDeviceInput(device: captureDevice)
-            captureSession.addInput(input)
+            self.captureSession.addInput(input)
             
             // Инициализируем оутпут, используя класс AVCaptureMetadataOutput и добавляем в нашу сессию
             let captureOutput = AVCaptureMetadataOutput()
-            captureSession.addOutput(captureOutput)
+            self.captureSession.addOutput(captureOutput)
             
             // Инициализуем наш делегат для получения всех сигналов
             captureOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-            captureOutput.metadataObjectTypes = codeTypes
+            captureOutput.metadataObjectTypes = self.codeTypes
             
         } catch { return }
         
         // Инициализируем слой с превью видео
-        cameraLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        cameraLayer!.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        cameraLayer!.frame = frame
+        self.layer = .init(session: self.captureSession)
+        
+        self.layer?.videoGravity = .resizeAspectFill
+        self.layer?.frame = self.frame
+        
+        self.layer?.addSublayer(self.scanArea.layer)
     }
     
-    public func stop() -> () { captureSession.stopRunning() }
+    public func stop() -> () {
+        self.captureSession.stopRunning()
+    }
     
-    public func start() -> () { captureSession.startRunning() }
+    public func start() -> () {
+        self.captureSession.startRunning()
+    }
     
-    func toggleFlashlight() -> FlashlightStatus {
+    public func toggleFlashlight() -> FlashlightStatus {
         guard let captureDevice = AVCaptureDevice.default(for: .video) else { return .notInitialized }
         
         if captureDevice.hasTorch {
@@ -82,7 +91,7 @@ final class CameraService : NSObject, CameraServiceProtocol {
                 captureDevice.torchMode = captureDevice.torchMode == .off ? .on : .off
                 captureDevice.unlockForConfiguration()
                 
-                return captureDevice.torchMode == .off ? .off : .on
+                return captureDevice.torchMode == .on ? .on : .off
             } catch let error {
                 print("Cannot toggle flashlight: \(error.localizedDescription)")
                 return .notInitialized
@@ -90,28 +99,28 @@ final class CameraService : NSObject, CameraServiceProtocol {
         } else { return .notFound }
     }
     
-    init(frame: CGRect, at view : CameraControllerProtocol) {
-        self.view = view
+    init(frame : CGRect, delegate : CameraDelegate?) {
         self.frame = frame
+        self.delegate = delegate
         
         super.init()
         
-        create(frame: frame)
+        self.configure()
     }
 }
 
-extension CameraService : AVCaptureMetadataOutputObjectsDelegate {
-    func metadataOutput(_ output: AVCaptureMetadataOutput,
-                        didOutput metadataObjects: [AVMetadataObject],
-                        from connection: AVCaptureConnection) {
-        if metadataObjects.isEmpty { return }
+extension Camera : AVCaptureMetadataOutputObjectsDelegate {
+    public func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) -> () {
         
-        guard let metadataObj = metadataObjects[0] as? AVMetadataMachineReadableCodeObject else { return }
+        guard !metadataObjects.isEmpty,
+              let metadataObj = metadataObjects.first as? AVMetadataMachineReadableCodeObject
+        else { return }
         
-        if codeTypes.contains(metadataObj.type) {
+        if self.codeTypes.contains(metadataObj.type) {
             if let barcode = metadataObj.stringValue {
-                self.view?.output(output: barcode)
+                self.delegate?.scanned(barcode: barcode)
             }
         }
+        
     }
 }

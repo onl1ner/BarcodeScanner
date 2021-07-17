@@ -7,7 +7,7 @@ DEPENDENCIES:
   - SwiftEntryKit
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - QuickLayout
     - SwiftEntryKit
 
@@ -17,4 +17,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 533cf2b58c9fd8d51c0fc541c894245268a17d8a
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.10.1

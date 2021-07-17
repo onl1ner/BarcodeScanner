@@ -9,11 +9,7 @@
 import UIKit
 import SwiftEntryKit
 
-protocol CameraControllerProtocol : class {
-    func output(output : String) -> ()
-}
-
-protocol MainViewControllerProtocol : CameraControllerProtocol {
+protocol MainViewControllerProtocol : AnyObject {
     func show(product : Product) -> ()
     func show(error : HTTPError) -> ()
     
@@ -27,10 +23,10 @@ class MainViewController: UIViewController, MainViewControllerProtocol {
     @IBOutlet private weak var blurEffectView: UIVisualEffectView!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
-    private lazy var camera = CameraService(frame: view.layer.bounds, at: self)
-    private lazy var scanArea = RectangleView(frame: .init(x: 0, y: 0, width: 250, height: 100))
+    private lazy var camera = Camera(frame: view.layer.bounds, delegate: self.presenter)
     
-    public var presenter : MainPresenterProtocol?
+    public var presenter : MainPresenterProtocol!
+    
     public var popupBuilder : PopupBuilderProtocol?
     
     @IBAction func toggleFlashlight(_ sender: UIButton) -> () {
@@ -45,13 +41,8 @@ class MainViewController: UIViewController, MainViewControllerProtocol {
     }
     
     private func createCamera() -> () {
-        guard let cameraLayer = camera.cameraLayer else { return }
+        guard let cameraLayer = camera.layer else { return }
         self.view.layer.addSublayer(cameraLayer)
-    }
-    
-    private func addScanArea() -> () {
-        self.view.addSubview(scanArea)
-        self.view.bringSubviewToFront(scanArea)
     }
     
     public func show(product: Product) -> () {
@@ -66,7 +57,7 @@ class MainViewController: UIViewController, MainViewControllerProtocol {
         popupBuilder?.show(error: error)
     }
     
-    func startInput() -> () {
+    public func startInput() -> () {
         camera.start()
         
         UIView.animate(withDuration: 0.2, animations: {
@@ -75,8 +66,6 @@ class MainViewController: UIViewController, MainViewControllerProtocol {
     }
     
     public func output(output: String) {
-        presenter?.getProduct(withBarcode: output)
-        
         self.blurEffectView.isHidden = false
         self.activityIndicator.startAnimating()
         
@@ -93,17 +82,12 @@ class MainViewController: UIViewController, MainViewControllerProtocol {
         createCamera()
         camera.start()
         
-        addScanArea()
-        
         self.view.bringSubviewToFront(toggleFlashlightButton)
         self.view.bringSubviewToFront(blurEffectView)
     }
     
     override func viewDidLayoutSubviews() -> () {
         super.viewDidLayoutSubviews()
-        
         camera.frame = view.layer.bounds
-        scanArea.center = view.center
     }
 }
-

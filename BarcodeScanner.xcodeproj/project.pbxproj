@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0806B0B326A2B96400489884 /* FlashlightStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0B226A2B96400489884 /* FlashlightStatus.swift */; };
 		9220A0F0250132D4000562F3 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0EA250132D4000562F3 /* MainPresenter.swift */; };
 		9220A0F1250132D4000562F3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0EC250132D4000562F3 /* Product.swift */; };
 		9220A0F2250132D4000562F3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9220A0EE250132D4000562F3 /* MainViewController.xib */; };
 		9220A0F3250132D4000562F3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0EF250132D4000562F3 /* MainViewController.swift */; };
 		9220A0F6250132EC000562F3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0F5250132EC000562F3 /* UIViewController.swift */; };
-		9220A0FC250132F7000562F3 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0F9250132F7000562F3 /* CameraService.swift */; };
+		9220A0FC250132F7000562F3 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0F9250132F7000562F3 /* Camera.swift */; };
 		9220A0FD250132F7000562F3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0FB250132F7000562F3 /* NetworkService.swift */; };
 		924521112427AC360050F4DD /* BarcodeRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924521102427AC360050F4DD /* BarcodeRectangleView.swift */; };
 		924521202427CCB00050F4DD /* ProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9245211F2427CCB00050F4DD /* ProductView.xib */; };
@@ -35,13 +36,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0806B0B226A2B96400489884 /* FlashlightStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashlightStatus.swift; sourceTree = "<group>"; };
 		79180CF1F92ACB640AF74021 /* Pods-BarcodeScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeScanner.debug.xcconfig"; path = "Target Support Files/Pods-BarcodeScanner/Pods-BarcodeScanner.debug.xcconfig"; sourceTree = "<group>"; };
 		9220A0EA250132D4000562F3 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		9220A0EC250132D4000562F3 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		9220A0EE250132D4000562F3 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		9220A0EF250132D4000562F3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9220A0F5250132EC000562F3 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		9220A0F9250132F7000562F3 /* CameraService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		9220A0F9250132F7000562F3 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		9220A0FB250132F7000562F3 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		924521102427AC360050F4DD /* BarcodeRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeRectangleView.swift; sourceTree = "<group>"; };
 		9245211F2427CCB00050F4DD /* ProductView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductView.xib; sourceTree = "<group>"; };
@@ -78,6 +80,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0806B0B026A2B95200489884 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0806B0B126A2B95800489884 /* Camera */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0806B0B126A2B95800489884 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				0806B0B226A2B96400489884 /* FlashlightStatus.swift */,
+				9220A0F9250132F7000562F3 /* Camera.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
 		08FBAB7926A20BA000DF4592 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +133,7 @@
 		08FBAB7C26A20CB100DF4592 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0806B0B026A2B95200489884 /* Components */,
 				08FBAB8226A20DB600DF4592 /* Models */,
 				9220A0F7250132F7000562F3 /* Services */,
 				9220A0FE25013368000562F3 /* Helpers */,
@@ -210,19 +230,10 @@
 		9220A0F7250132F7000562F3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				9220A0F8250132F7000562F3 /* InputLayer */,
 				9220A0FA250132F7000562F3 /* NetworkLayer */,
 				92C3177625016463000FC593 /* OutputLayer */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		9220A0F8250132F7000562F3 /* InputLayer */ = {
-			isa = PBXGroup;
-			children = (
-				9220A0F9250132F7000562F3 /* CameraService.swift */,
-			);
-			path = InputLayer;
 			sourceTree = "<group>";
 		};
 		9220A0FA250132F7000562F3 /* NetworkLayer */ = {
@@ -408,9 +419,10 @@
 				92C3177B2501718B000FC593 /* GoogleResponse.swift in Sources */,
 				9220A0F3250132D4000562F3 /* MainViewController.swift in Sources */,
 				92C31775250160EC000FC593 /* Attributes.swift in Sources */,
-				9220A0FC250132F7000562F3 /* CameraService.swift in Sources */,
+				9220A0FC250132F7000562F3 /* Camera.swift in Sources */,
 				9220A0F0250132D4000562F3 /* MainPresenter.swift in Sources */,
 				9254558224265D65007F5FD4 /* SceneDelegate.swift in Sources */,
+				0806B0B326A2B96400489884 /* FlashlightStatus.swift in Sources */,
 				92ECA738242A347800CCE0B7 /* UIView.swift in Sources */,
 				92ECA73624292C7F00CCE0B7 /* ErrorPopup.swift in Sources */,
 				9220A0F1250132D4000562F3 /* Product.swift in Sources */,
