@@ -15,6 +15,8 @@
 		0806B0C526A2C2F900489884 /* ErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0C426A2C2F900489884 /* ErrorPresenter.swift */; };
 		0806B0C826A2C3F700489884 /* ErrorBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0C726A2C3F700489884 /* ErrorBuilder.swift */; };
 		0806B0CB26A2C4B400489884 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0CA26A2C4B400489884 /* NetworkError.swift */; };
+		0806B0CE26A2CB8800489884 /* ProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0CD26A2CB8800489884 /* ProductPresenter.swift */; };
+		0806B0D126A2CC0D00489884 /* ProductBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0D026A2CC0D00489884 /* ProductBuilder.swift */; };
 		9220A0F0250132D4000562F3 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0EA250132D4000562F3 /* MainPresenter.swift */; };
 		9220A0F1250132D4000562F3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0EC250132D4000562F3 /* Product.swift */; };
 		9220A0F2250132D4000562F3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9220A0EE250132D4000562F3 /* MainViewController.xib */; };
@@ -23,8 +25,8 @@
 		9220A0FC250132F7000562F3 /* STCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0F9250132F7000562F3 /* STCamera.swift */; };
 		9220A0FD250132F7000562F3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0FB250132F7000562F3 /* NetworkService.swift */; };
 		924521112427AC360050F4DD /* BarcodeRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924521102427AC360050F4DD /* BarcodeRectangleView.swift */; };
-		924521202427CCB00050F4DD /* ProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9245211F2427CCB00050F4DD /* ProductView.xib */; };
-		924521222427CCDA0050F4DD /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924521212427CCDA0050F4DD /* ProductView.swift */; };
+		924521202427CCB00050F4DD /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9245211F2427CCB00050F4DD /* ProductViewController.xib */; };
+		924521222427CCDA0050F4DD /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924521212427CCDA0050F4DD /* ProductViewController.swift */; };
 		9254558024265D65007F5FD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254557F24265D65007F5FD4 /* AppDelegate.swift */; };
 		9254558224265D65007F5FD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254558124265D65007F5FD4 /* SceneDelegate.swift */; };
 		9254558924265D66007F5FD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9254558824265D66007F5FD4 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		0806B0C426A2C2F900489884 /* ErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPresenter.swift; sourceTree = "<group>"; };
 		0806B0C726A2C3F700489884 /* ErrorBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBuilder.swift; sourceTree = "<group>"; };
 		0806B0CA26A2C4B400489884 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0806B0CD26A2CB8800489884 /* ProductPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresenter.swift; sourceTree = "<group>"; };
+		0806B0D026A2CC0D00489884 /* ProductBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBuilder.swift; sourceTree = "<group>"; };
 		79180CF1F92ACB640AF74021 /* Pods-BarcodeScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeScanner.debug.xcconfig"; path = "Target Support Files/Pods-BarcodeScanner/Pods-BarcodeScanner.debug.xcconfig"; sourceTree = "<group>"; };
 		9220A0EA250132D4000562F3 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		9220A0EC250132D4000562F3 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -59,8 +63,8 @@
 		9220A0F9250132F7000562F3 /* STCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCamera.swift; sourceTree = "<group>"; };
 		9220A0FB250132F7000562F3 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		924521102427AC360050F4DD /* BarcodeRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeRectangleView.swift; sourceTree = "<group>"; };
-		9245211F2427CCB00050F4DD /* ProductView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductView.xib; sourceTree = "<group>"; };
-		924521212427CCDA0050F4DD /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		9245211F2427CCB00050F4DD /* ProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
+		924521212427CCDA0050F4DD /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		9254557C24265D65007F5FD4 /* BarcodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9254557F24265D65007F5FD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9254558124265D65007F5FD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +171,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0806B0CC26A2CB7C00489884 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0806B0CD26A2CB8800489884 /* ProductPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0806B0CF26A2CC0400489884 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				0806B0D026A2CC0D00489884 /* ProductBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		08FBAB7926A20BA000DF4592 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,7 +213,6 @@
 		08FBAB7B26A20C9500DF4592 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				9220A0EB250132D4000562F3 /* Model */,
 				9220A0ED250132D4000562F3 /* View */,
 				9220A0E9250132D4000562F3 /* Presenter */,
 				0806B0B526A2BBAD00489884 /* Router */,
@@ -226,7 +245,10 @@
 		08FBAB7E26A20D5800DF4592 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				9220A0EB250132D4000562F3 /* Model */,
 				08FBAB7F26A20D6400DF4592 /* View */,
+				0806B0CC26A2CB7C00489884 /* Presenter */,
+				0806B0CF26A2CC0400489884 /* Builder */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -234,8 +256,8 @@
 		08FBAB7F26A20D6400DF4592 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9245211F2427CCB00050F4DD /* ProductView.xib */,
-				924521212427CCDA0050F4DD /* ProductView.swift */,
+				9245211F2427CCB00050F4DD /* ProductViewController.xib */,
+				924521212427CCDA0050F4DD /* ProductViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -438,7 +460,7 @@
 				92ECA711242920D000CCE0B7 /* ProximaNovaExCn-Light.ttf in Resources */,
 				9254558924265D66007F5FD4 /* Assets.xcassets in Resources */,
 				92ECA717242920D000CCE0B7 /* ProximaNovaExCn-Regular.ttf in Resources */,
-				924521202427CCB00050F4DD /* ProductView.xib in Resources */,
+				924521202427CCB00050F4DD /* ProductViewController.xib in Resources */,
 				92ECA71C242920D000CCE0B7 /* ProximaNovaExCn-Bold.ttf in Resources */,
 				9220A0F2250132D4000562F3 /* MainViewController.xib in Resources */,
 				92ECA710242920D000CCE0B7 /* ProximaNovaExCn-Thin.ttf in Resources */,
@@ -477,13 +499,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				924521222427CCDA0050F4DD /* ProductView.swift in Sources */,
+				924521222427CCDA0050F4DD /* ProductViewController.swift in Sources */,
 				924521112427AC360050F4DD /* BarcodeRectangleView.swift in Sources */,
 				0806B0CB26A2C4B400489884 /* NetworkError.swift in Sources */,
 				0806B0B726A2BBB600489884 /* MainRouter.swift in Sources */,
 				9220A0FD250132F7000562F3 /* NetworkService.swift in Sources */,
 				9254558024265D65007F5FD4 /* AppDelegate.swift in Sources */,
 				92C3177B2501718B000FC593 /* GoogleResponse.swift in Sources */,
+				0806B0D126A2CC0D00489884 /* ProductBuilder.swift in Sources */,
 				9220A0F3250132D4000562F3 /* MainViewController.swift in Sources */,
 				0806B0C826A2C3F700489884 /* ErrorBuilder.swift in Sources */,
 				92C31775250160EC000FC593 /* Attributes.swift in Sources */,
@@ -492,6 +515,7 @@
 				9254558224265D65007F5FD4 /* SceneDelegate.swift in Sources */,
 				0806B0B326A2B96400489884 /* FlashlightStatus.swift in Sources */,
 				92ECA738242A347800CCE0B7 /* UIView.swift in Sources */,
+				0806B0CE26A2CB8800489884 /* ProductPresenter.swift in Sources */,
 				0806B0C526A2C2F900489884 /* ErrorPresenter.swift in Sources */,
 				0806B0BF26A2C14700489884 /* STModal.swift in Sources */,
 				0806B0C226A2C17000489884 /* STAlert.swift in Sources */,

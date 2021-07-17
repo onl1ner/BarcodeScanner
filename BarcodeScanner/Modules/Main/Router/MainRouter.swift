@@ -21,7 +21,8 @@ final class MainRouter: MainRouterProtocol {
     private weak var view : MainViewController?
     
     public func show(product: Product) -> () {
-        
+        let modal = ProductBuilder.build(with: product, delegate: self.view)
+        SwiftEntryKit.display(entry: modal.view, using: modal.attributes)
     }
     
     public func show(error: NetworkError) -> () {
