@@ -16,19 +16,19 @@ final class STAlert {
         return self.actionSheetController
     }
     
-    public func addAction(title : String, style : UIAlertAction.Style, actionHandler : ((UIAlertAction) -> ())?) -> Self {
+    public func addAction(title: String, style: UIAlertAction.Style, actionHandler: ((UIAlertAction) -> ())?) -> Self {
         let action = UIAlertAction(title: title, style: style, handler: actionHandler)
         self.actionSheetController.addAction(action)
         return self
     }
     
-    public func addCancel(title : String = "Cancel") -> Self {
+    public func addCancel(title: String = "Cancel") -> Self {
         let cancelAction = UIAlertAction(title: title, style: .cancel, handler: nil)
         self.actionSheetController.addAction(cancelAction)
         return self
     }
     
-    public convenience init(error : NSError) {
+    public convenience init(error: NSError) {
         self.init(title: "Error", message: "\(error.domain). Code: \(error.code)", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Ok", style: .cancel, handler: { _ in
@@ -38,7 +38,7 @@ final class STAlert {
         self.actionSheetController.addAction(action)
     }
     
-    public init(title : String? = nil, message : String? = nil, preferredStyle : UIAlertController.Style) {
+    public init(title: String? = nil, message: String? = nil, preferredStyle: UIAlertController.Style) {
         self.actionSheetController = .init(title: title, message: message, preferredStyle: preferredStyle)
     }
 }

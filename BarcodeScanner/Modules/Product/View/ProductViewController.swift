@@ -59,8 +59,8 @@ final class ProductViewController: UIViewController, ProductViewControllerProtoc
         self.barcodeBackView.layer.cornerRadius = 16
         self.imageView.layer.cornerRadius = 16
         
-        self.imageBackView.setupShadow(withColor: .black, withOpacity: 0.2, withOffset: .zero)
-        self.barcodeBackView.setupShadow(withColor: .black, withOpacity: 0.2, withOffset: .zero)
+        self.imageBackView.setupShadow(withColor: .black, opacity: 0.2, offset: .zero)
+        self.barcodeBackView.setupShadow(withColor: .black, opacity: 0.2, offset: .zero)
         
         self.presenter.viewDidLoad()
     }

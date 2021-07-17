@@ -29,21 +29,21 @@ final class STCamera : NSObject, STCameraProtocol {
     
     private let codeTypes: [AVMetadataObject.ObjectType] = [.ean8, .ean13]
     
-    private var captureSession : AVCaptureSession = .init()
-    private var delegate : STCameraDelegate?
+    private var captureSession: AVCaptureSession = .init()
+    private var delegate: STCameraDelegate?
     
-    private var scanArea : RectangleView = .init(frame: .init(x: 0, y: 0, width: 250.0, height: 100.0))
+    private var scanArea: RectangleView = .init(frame: .init(x: 0, y: 0, width: 250.0, height: 100.0))
     
-    public var layer : AVCaptureVideoPreviewLayer?
+    public var layer: AVCaptureVideoPreviewLayer?
     
-    public var frame : CGRect {
+    public var frame: CGRect {
         didSet {
             self.layer?.frame = self.frame
             self.scanArea.center = self.center
         }
     }
     
-    public var center : CGPoint {
+    public var center: CGPoint {
         return .init(x: self.frame.width / 2, y: self.frame.height / 2)
     }
     
@@ -62,6 +62,7 @@ final class STCamera : NSObject, STCameraProtocol {
             // Инициализуем наш делегат для получения всех сигналов
             captureOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             captureOutput.metadataObjectTypes = self.codeTypes
+            captureOutput.rectOfInterest = self.scanArea.bounds
             
         } catch { return }
         
@@ -99,7 +100,7 @@ final class STCamera : NSObject, STCameraProtocol {
         } else { return .notFound }
     }
     
-    init(frame : CGRect, delegate : STCameraDelegate?) {
+    init(frame: CGRect, delegate: STCameraDelegate?) {
         self.frame = frame
         self.delegate = delegate
         
