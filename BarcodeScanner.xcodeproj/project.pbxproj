@@ -10,12 +10,14 @@
 		0806B0B326A2B96400489884 /* FlashlightStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0B226A2B96400489884 /* FlashlightStatus.swift */; };
 		0806B0B726A2BBB600489884 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0B626A2BBB600489884 /* MainRouter.swift */; };
 		0806B0BB26A2BD7B00489884 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0BA26A2BD7B00489884 /* MainBuilder.swift */; };
+		0806B0BF26A2C14700489884 /* STModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0BE26A2C14700489884 /* STModal.swift */; };
+		0806B0C226A2C17000489884 /* STAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806B0C126A2C16F00489884 /* STAlert.swift */; };
 		9220A0F0250132D4000562F3 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0EA250132D4000562F3 /* MainPresenter.swift */; };
 		9220A0F1250132D4000562F3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0EC250132D4000562F3 /* Product.swift */; };
 		9220A0F2250132D4000562F3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9220A0EE250132D4000562F3 /* MainViewController.xib */; };
 		9220A0F3250132D4000562F3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0EF250132D4000562F3 /* MainViewController.swift */; };
 		9220A0F6250132EC000562F3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0F5250132EC000562F3 /* UIViewController.swift */; };
-		9220A0FC250132F7000562F3 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0F9250132F7000562F3 /* Camera.swift */; };
+		9220A0FC250132F7000562F3 /* STCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0F9250132F7000562F3 /* STCamera.swift */; };
 		9220A0FD250132F7000562F3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220A0FB250132F7000562F3 /* NetworkService.swift */; };
 		924521112427AC360050F4DD /* BarcodeRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924521102427AC360050F4DD /* BarcodeRectangleView.swift */; };
 		924521202427CCB00050F4DD /* ProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9245211F2427CCB00050F4DD /* ProductView.xib */; };
@@ -41,13 +43,15 @@
 		0806B0B226A2B96400489884 /* FlashlightStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashlightStatus.swift; sourceTree = "<group>"; };
 		0806B0B626A2BBB600489884 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		0806B0BA26A2BD7B00489884 /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
+		0806B0BE26A2C14700489884 /* STModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STModal.swift; sourceTree = "<group>"; };
+		0806B0C126A2C16F00489884 /* STAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STAlert.swift; sourceTree = "<group>"; };
 		79180CF1F92ACB640AF74021 /* Pods-BarcodeScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeScanner.debug.xcconfig"; path = "Target Support Files/Pods-BarcodeScanner/Pods-BarcodeScanner.debug.xcconfig"; sourceTree = "<group>"; };
 		9220A0EA250132D4000562F3 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		9220A0EC250132D4000562F3 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		9220A0EE250132D4000562F3 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		9220A0EF250132D4000562F3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9220A0F5250132EC000562F3 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		9220A0F9250132F7000562F3 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		9220A0F9250132F7000562F3 /* STCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCamera.swift; sourceTree = "<group>"; };
 		9220A0FB250132F7000562F3 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		924521102427AC360050F4DD /* BarcodeRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeRectangleView.swift; sourceTree = "<group>"; };
 		9245211F2427CCB00050F4DD /* ProductView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductView.xib; sourceTree = "<group>"; };
@@ -87,18 +91,20 @@
 		0806B0B026A2B95200489884 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				0806B0B126A2B95800489884 /* Camera */,
+				0806B0C026A2C15900489884 /* STAlert */,
+				0806B0BD26A2C12E00489884 /* STModal */,
+				0806B0B126A2B95800489884 /* STCamera */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		0806B0B126A2B95800489884 /* Camera */ = {
+		0806B0B126A2B95800489884 /* STCamera */ = {
 			isa = PBXGroup;
 			children = (
+				9220A0F9250132F7000562F3 /* STCamera.swift */,
 				0806B0B226A2B96400489884 /* FlashlightStatus.swift */,
-				9220A0F9250132F7000562F3 /* Camera.swift */,
 			);
-			path = Camera;
+			path = STCamera;
 			sourceTree = "<group>";
 		};
 		0806B0B526A2BBAD00489884 /* Router */ = {
@@ -115,6 +121,22 @@
 				0806B0BA26A2BD7B00489884 /* MainBuilder.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		0806B0BD26A2C12E00489884 /* STModal */ = {
+			isa = PBXGroup;
+			children = (
+				0806B0BE26A2C14700489884 /* STModal.swift */,
+			);
+			path = STModal;
+			sourceTree = "<group>";
+		};
+		0806B0C026A2C15900489884 /* STAlert */ = {
+			isa = PBXGroup;
+			children = (
+				0806B0C126A2C16F00489884 /* STAlert.swift */,
+			);
+			path = STAlert;
 			sourceTree = "<group>";
 		};
 		08FBAB7926A20BA000DF4592 /* Supporting Files */ = {
@@ -442,11 +464,13 @@
 				92C3177B2501718B000FC593 /* GoogleResponse.swift in Sources */,
 				9220A0F3250132D4000562F3 /* MainViewController.swift in Sources */,
 				92C31775250160EC000FC593 /* Attributes.swift in Sources */,
-				9220A0FC250132F7000562F3 /* Camera.swift in Sources */,
+				9220A0FC250132F7000562F3 /* STCamera.swift in Sources */,
 				9220A0F0250132D4000562F3 /* MainPresenter.swift in Sources */,
 				9254558224265D65007F5FD4 /* SceneDelegate.swift in Sources */,
 				0806B0B326A2B96400489884 /* FlashlightStatus.swift in Sources */,
 				92ECA738242A347800CCE0B7 /* UIView.swift in Sources */,
+				0806B0BF26A2C14700489884 /* STModal.swift in Sources */,
+				0806B0C226A2C17000489884 /* STAlert.swift in Sources */,
 				0806B0BB26A2BD7B00489884 /* MainBuilder.swift in Sources */,
 				92ECA73624292C7F00CCE0B7 /* ErrorPopup.swift in Sources */,
 				9220A0F1250132D4000562F3 /* Product.swift in Sources */,

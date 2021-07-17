@@ -9,11 +9,11 @@
 import UIKit
 import AVFoundation
 
-protocol CameraDelegate {
+protocol STCameraDelegate {
     func scanned(barcode : String) -> ()
 }
 
-protocol CameraProtocol : AnyObject {
+protocol STCameraProtocol : AnyObject {
     var layer : AVCaptureVideoPreviewLayer? { get }
     var frame : CGRect { get set }
     
@@ -22,15 +22,15 @@ protocol CameraProtocol : AnyObject {
     
     func toggleFlashlight() -> FlashlightStatus
     
-    init(frame : CGRect, delegate : CameraDelegate?)
+    init(frame : CGRect, delegate : STCameraDelegate?)
 }
 
-final class Camera : NSObject, CameraProtocol {
+final class STCamera : NSObject, STCameraProtocol {
     
     private let codeTypes: [AVMetadataObject.ObjectType] = [.ean8, .ean13]
     
     private var captureSession : AVCaptureSession = .init()
-    private var delegate : CameraDelegate?
+    private var delegate : STCameraDelegate?
     
     private var scanArea : RectangleView = .init(frame: .init(x: 0, y: 0, width: 250.0, height: 100.0))
     
@@ -99,7 +99,7 @@ final class Camera : NSObject, CameraProtocol {
         } else { return .notFound }
     }
     
-    init(frame : CGRect, delegate : CameraDelegate?) {
+    init(frame : CGRect, delegate : STCameraDelegate?) {
         self.frame = frame
         self.delegate = delegate
         
@@ -109,7 +109,7 @@ final class Camera : NSObject, CameraProtocol {
     }
 }
 
-extension Camera : AVCaptureMetadataOutputObjectsDelegate {
+extension STCamera : AVCaptureMetadataOutputObjectsDelegate {
     public func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) -> () {
         
         guard !metadataObjects.isEmpty,

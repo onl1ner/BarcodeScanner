@@ -21,7 +21,7 @@ final class MainViewController: UIViewController, MainViewControllerProtocol {
     @IBOutlet private weak var blurEffectView : UIVisualEffectView!
     @IBOutlet private weak var activityIndicator : UIActivityIndicatorView!
     
-    private lazy var camera : CameraProtocol = Camera(frame: self.view.layer.bounds, delegate: self)
+    private lazy var camera : STCameraProtocol = STCamera(frame: self.view.layer.bounds, delegate: self)
     
     public var presenter : MainPresenterProtocol!
     
@@ -81,7 +81,7 @@ final class MainViewController: UIViewController, MainViewControllerProtocol {
     }
 }
 
-extension MainViewController: CameraDelegate {
+extension MainViewController: STCameraDelegate {
     
     public func scanned(barcode: String) -> () {
         self.presenter.product(for: barcode)
