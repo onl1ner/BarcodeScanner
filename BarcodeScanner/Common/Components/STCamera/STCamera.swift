@@ -32,7 +32,7 @@ final class STCamera : NSObject, STCameraProtocol {
     private var captureSession: AVCaptureSession = .init()
     private var delegate: STCameraDelegate?
     
-    private var scanArea: RectangleView = .init(frame: .init(x: 0, y: 0, width: 250.0, height: 100.0))
+    private var scanArea: STScanArea = .init(frame: .init(x: 0, y: 0, width: 250.0, height: 100.0))
     
     public var layer: AVCaptureVideoPreviewLayer?
     

@@ -1,16 +1,15 @@
 //
-//  BarcodeRectangleView.swift
+//  STScanArea.swift
 //  BarcodeScanner
 //
-//  Created by onl1ner onl1ner on 22/03/2020.
-//  Copyright © 2020 onl1ner onl1ner. All rights reserved.
+//  Created by Tamerlan Satualdypov on 17.07.2021.
+//  Copyright © 2021 onl1ner onl1ner. All rights reserved.
 //
-
 
 import UIKit
 import CoreGraphics
 
-final class RectangleView : UIView {
+final class STScanArea : UIView {
     
     public var sizeMultiplier : CGFloat = 0.2 {
         didSet{
@@ -30,16 +29,7 @@ final class RectangleView : UIView {
         }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = UIColor.clear
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
-    func drawCorners() -> Void {
+    private func drawCorners() -> () {
         /// Углы прямоугольника рисуются по часовой стрелке начиная с левого верхнего угла
         
         let currentContext = UIGraphicsGetCurrentContext()
@@ -81,9 +71,17 @@ final class RectangleView : UIView {
         currentContext?.strokePath()
     }
     
-    override func draw(_ rect: CGRect) -> Void {
+    override public func draw(_ rect: CGRect) -> Void {
         super.draw(rect)
         self.drawCorners()
     }
-
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = UIColor.clear
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
 }
