@@ -45,7 +45,7 @@
                         <action selector="dismissPressed:" destination="-1" eventType="touchUpInside" id="V1E-s6-cH9"/>
                     </connections>
                 </button>
-                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Oeh-3N-Own">
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Oeh-3N-Own">
                     <rect key="frame" x="16" y="43.5" width="343" height="232.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pEs-gW-dHS">
@@ -91,18 +91,18 @@
                                 </view>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Z4Q-Mf-SEq">
-                            <rect key="frame" x="168" y="0.0" width="175" height="134.5"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Z4Q-Mf-SEq">
+                            <rect key="frame" x="176" y="0.0" width="167" height="138.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Классификатор продукта" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8b-84-dH5">
-                                    <rect key="frame" x="0.0" y="0.0" width="175" height="61"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="167" height="61"/>
                                     <fontDescription key="fontDescription" name="ProximaNovaExCn-Thin" family="Proxima Nova Extra Condensed" pointSize="25"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наименование продукта" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LC-LG-oO1">
-                                    <rect key="frame" x="0.0" y="61" width="175" height="73.5"/>
+                                    <rect key="frame" x="0.0" y="65" width="167" height="73.5"/>
                                     <fontDescription key="fontDescription" name="ProximaNovaExCn-Light" family="Proxima Nova Extra Condensed" pointSize="30"/>
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>

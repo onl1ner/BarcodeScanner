@@ -187,8 +187,8 @@
 		08FBAB7926A20BA000DF4592 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9254558D24265D66007F5FD4 /* Info.plist */,
 				92ECA6DE242920D000CCE0B7 /* Font */,
+				9254558D24265D66007F5FD4 /* Info.plist */,
 				9254557F24265D65007F5FD4 /* AppDelegate.swift */,
 				9254558124265D65007F5FD4 /* SceneDelegate.swift */,
 				9254558824265D66007F5FD4 /* Assets.xcassets */,

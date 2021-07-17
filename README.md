@@ -11,7 +11,7 @@ BarcodeScanner will give you information related to scanned product. Name of the
 ## License
 This application is distributed under the terms and conditions of the MIT license.
 ```
-Copyright (c) 2020 Tamerlan Satualdypov
+Copyright (c) 2021 Tamerlan Satualdypov
  
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
